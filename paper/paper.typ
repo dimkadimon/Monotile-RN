@@ -4,6 +4,8 @@
 #set par(justify: true)
 #set heading(numbering: "1.1.")
 #show heading: it => { v(0.4em); it; v(0.2em) }
+#show figure.where(kind: table): set figure(supplement: [Table])
+#show figure.where(kind: table): set block(breakable: false)
 #set math.equation(numbering: none)
 
 #let thm(kind, name, body) = block(inset: (top: 0.3em, bottom: 0.3em), width: 100%)[
@@ -11,9 +13,9 @@
 #let pf(body) = [_Proof._ #body #h(1fr) $square$]
 
 #align(center)[
-  #text(16pt, weight: "bold")[Towards Strongly Aperiodic Monotiles in Higher Dimensions]
+  #text(16pt, weight: "bold")[Towards Strongly Aperiodic Monotiles \ in Higher Dimensions]
   #v(0.5em)
-  Dmitry Kamenetsky \ #text(9pt)[dkamenetsky\@gmail.com] \ #text(9pt)[September 30, 2026 — version 9]
+  Dmitry Kamenetsky \ #text(9pt)[dkamenetsky\@gmail.com] \ #text(9pt)[September 30, 2026 — version 10]
 ]
 
 #block(inset: (x: 1.5em))[
@@ -30,19 +32,21 @@ In three dimensions the Schmitt–Conway–Danzer biprism @schmitt @danzer tiles
 
 = Contributions and relation to the literature <sec:contrib>
 
-The published treatments of Chair44 are a construction (Tsiokos @tsiokos), a Berger-style proof in which the matching rules are read off from corner and socket markings (Goodman-Strauss @gs2026), and a computer enumeration of the contact graph of an equivalent arrow rule set (Flicker @flicker: 2388 bare contacts, 44 allowed, 33 one-shell clusters, 15 second shells). Goodman-Strauss's 1999 paper @gs99 gives an aperiodic _pair_ of tiles for the notched-cube substitution in every dimension $N >= 3$, and remarks in @gs2026 that shape and substitution generalise, without addressing whether a single marked tile does. Against this background the present note contributes the following.
+*Background in plain terms.* A _matching rule_ is a set of instructions saying which tiles may be placed next to which, and in which orientations. For the chair, a rule is "good" if the only way to obey it everywhere is to build the tiles up, level by level, into ever larger copies of the chair (_supertiles_). Once that is known, aperiodicity follows by a standard argument (Theorem 11.1). Chair44 is a chair whose surface is shaped so that the shape itself acts as such a rule. What is known about it: Tsiokos @tsiokos found the shape; Goodman-Strauss @gs2026 explained why it works by reading colours off its corners and sockets; Flicker @flicker checked an equivalent rule by computer (two chairs can touch in 2388 ways, the rule allows 44, and among the 33 ways to surround one chair only 15 can be continued, each around the same supertile). For dimensions $N >= 4$ nothing analogous is known: Goodman-Strauss's 1999 construction @gs99 needs _two_ different tiles, and his 2026 notes remark only that the chair shape and its self-similarity generalise.
 
-1. *A dimension-independent formalism for chair matching rules* (@sec:frames). The marked tile is $C_N$ together with its full orientation frame, and the matching rule is _derived_: it is the set of relative poses occurring between tiles in hierarchical tilings (the hierarchical language), closed under coarsening. In the literature the rules of Chair44 were designed by hand and verified afterwards; here the substitution itself dictates the rule, and the only free data are the $2^N - 1$ child frames. This makes "find matching rules for the chair in $RR^N$" a finite problem in every dimension.
+This note adds the following.
 
-2. *A finite certificate for unique hierarchy* (Proposition 7.1): coarsening closure (C1), tightness of the induced facet rules (C2), and a two-shell enclosure analysis (C3). Its proof is a short scaling induction. Flicker's enumeration @flicker is the special case $N = 3$ of (C3) for a hand-designed rule; conditions (C1)–(C2) are what allow the induction to pass to all levels without further computation.
+1. *A way to obtain the rule from the tile itself* (@sec:frames). Instead of inventing a rule and checking it, we let the tile remember its orientation ("frame") and declare admissible exactly those contacts that appear when supertiles are built, at all levels. The only choices to be made are the orientations of the $2^N - 1$ outer children inside a supertile. For every $N$ this is a finite list of candidates, and each candidate can be tested by computer.
 
-3. *Theorem A.* For $N = 3$ the certificate passes, giving explicit facet rules on the 24 panels of $C_3$ (135 admissible facet-contact triples). The computation reproduces every published statistic of Chair44 (2388, 44, 30, 33, 15, one complete supertile) without using either published rule set, and runs in about two seconds. We regard this as an independent verification of the Chair44 mechanism at the level of combinatorial matching rules.
+2. *A finite test that proves the rule works* (Proposition 7.1). Three checks—(C1) the rule reproduces itself one level up, (C2) it can be phrased face by face, (C3) every way to surround a tile either cannot be continued or forces one specific complete supertile—together imply that every tiling obeying the rule is built from supertiles at every level. The proof is a short induction on the level. Flicker's enumeration @flicker is essentially check (C3) for $N = 3$; checks (C1) and (C2) are what remove the need for any further computation at higher levels.
 
-4. *Theorem B (rigidity).* Among all $3^7 = 2187$ homochiral frame assignments of the 3D substitution with a translated central child, exactly three—one orbit under conjugation by coordinate permutations—are coarsening-closed. The Chair44 marking is thus not a choice but is forced by self-similarity. No statement of this kind appears in @tsiokos @gs2026 @flicker.
+3. *Theorem A.* For $N = 3$ the test passes. It produces an explicit rule for the 24 square faces of the chair (135 admissible ways for two faces to meet) and reproduces every published number for Chair44—2388, 44, 30, 33, 15, one supertile—although neither published rule was used as input. The whole computation takes about two seconds. We regard this as an independent verification of the Chair44 mechanism at the level of matching rules (not of the specific polyhedron).
 
-5. *Four dimensions* (@sec:N4). The pipeline runs on $C_4$ unchanged. The natural generalisations (the canonical assignment, the $D_4$-, $Z_2 times Z_2$- and $Z_4$-symmetric families, a suspension of the 3D solution) are shown _not_ to be self-similar, and the precise finite problem that remains is stated (Problem 9.1) together with software that decides condition (C1) for any candidate in about two seconds.
+4. *Theorem B: there is no other choice.* Among all $3^7 = 2187$ possible orientation choices for the seven outer children (with the central child a plain translate, and all children rotations rather than reflections), exactly three pass check (C1), and they are the same choice up to renaming the coordinate axes. In other words, the Chair44 marking is forced by self-similarity. This has not been observed before.
 
-6. *Expository material and a conditional theorem.* The explicit rep-$2^N$ dissection (@sec:dissect) and Theorem 11.1 (strong aperiodicity and the bound $|"Aut"| <= 2^(N-1) N!$ under lattice registration and hierarchical enforcement) are included to make the note self-contained; the theorem is standard in spirit and we claim no novelty for it.
+5. *Four dimensions* (@sec:N4). The same programs run on the 4-dimensional chair. All the "obvious" generalisations of the 3D choice—7712 candidates from several symmetric families, and a direct lift of the 3D solution—fail check (C1), always in the same way. What remains is a precisely stated finite problem (Problem 9.1): a search over $12^15$ candidates, each testable in two seconds. We give the software; we do not claim a 4-dimensional monotile.
+
+6. *Expository material and a conditional theorem.* The explicit self-similar dissection of the $N$-dimensional chair (@sec:dissect) and Theorem 11.1 (a tiling that is built from supertiles at every level, and whose tiles sit on the cubic lattice, has no translational or screw symmetries and at most $2^(N-1) N!$ symmetries in all) are included to make the note self-contained; we claim no novelty for them.
 
 All code is available at #link("https://github.com/dimkadimon/Monotile-RN")[github.com/dimkadimon/Monotile-RN] (Python 3, standard library plus NumPy for figures).
 
@@ -131,9 +135,9 @@ _(C3)_ Enclosures of the reference tile are enumerated by backtracking over the 
 
 Hence (C1)–(C3) hold and Proposition 7.1 applies: every lattice-registered $F^*$-tiling is uniquely hierarchical. Existence of tilings follows from (C1): the level-$k$ supertiles are $P_0$-patches, $P_0 subset.eq P^*$, and a limit of nested supertiles containing a fixed tile is an $F^*$-tiling. Since every $g$ occurring in $P^*$ is a rotation, all tiles of an $F^*$-tiling have the same handedness. Theorem 11.1 now gives strong aperiodicity and $|"Aut"(cal(T))| <= 2^2 dot 3! = 24$.]
 
-The computation produces the following data.
+The computation produces the data of @tab:N3.
 
-#block(breakable: false)[#align(center, table(columns: (auto, auto), align: (left, left), stroke: 0.4pt, inset: 4pt,
+#figure(table(columns: (auto, auto), align: (left, left), stroke: 0.4pt, inset: 4pt,
   [*quantity*], [*value*],
   [hierarchical language $|P_0|$], [30],
   [coarsening closure], [$30 arrow 44 arrow 44$; closed after one step, no offset poses],
@@ -145,7 +149,7 @@ The computation produces the following data.
   [live enclosures with exactly one compatible supertile], [15 of 15],
   [presence (Pr) checks], [14 (the 15th is $T = T_0$); 0 failures],
   [DFS node limit reached], [never],
-))]
+), caption: [Data produced by the certificate for $N = 3$ (Theorem A).]) <tab:N3>
 
 *Comparison with the published constructions.* Flicker @flicker reports for Chair44: 2388 bare contacts, 44 allowed by the arrow rules of which 30 occur in infinite tilings, 33 one-shell clusters, 15 admitting a second shell, all containing the same complete "Superchair". Goodman-Strauss @gs2026 describes the same mechanism in Berger's style (every marked tile lies in a marked supertile with the same corner markings; supertiles meet only fully face-to-face; $|"Aut"| <= 24$). Our numbers coincide term by term although our marking (the full frame) and our rule (the closed contact language) were derived without reference to either paper. We regard this as an independent verification of the Chair44 mechanism at the level of the combinatorial matching rules. What the present note does _not_ do is re-derive the specific polyhedral shape; see @sec:poly.
 
@@ -162,9 +166,9 @@ The three closed assignments are also singled out by the simplest statistic: the
 
 = Four dimensions: what the pipeline shows <sec:N4>
 
-All code is dimension-independent; running it on $C_4$ ($16$ children, $64$ panels, $384$ frames) is a matter of seconds per frame assignment. Unlike $N = 3$, however, the assignment space is $12^15 approx 1.5 dot 10^16$ homochiral choices (12 proper rotations per outer child), so exhaustive enumeration is impossible with our resources and we tested structured families.
+All code is dimension-independent; running it on $C_4$ ($16$ children, $64$ panels, $384$ frames) is a matter of seconds per frame assignment. Unlike $N = 3$, however, the assignment space is $12^15 approx 1.5 dot 10^16$ homochiral choices (12 proper rotations per outer child), so exhaustive enumeration is impossible with our resources and we tested the structured families of @tab:N4.
 
-#block(breakable: false)[#align(center, table(columns: (auto, auto, auto, auto), align: (left, left, left, left), stroke: 0.4pt, inset: 4pt,
+#figure(table(columns: (auto, auto, auto, auto), align: (left, left, left, left), stroke: 0.4pt, inset: 4pt,
   [*family*], [*size*], [*best $|Sigma(P_0)|$ (min over family)*], [*closure*],
   [canonical ($pi_v = "id"$ or a fixed transposition, by parity)], [1], [158 ($|P_0| = 46$)], [$46 arrow 158 arrow 3354 arrow$ offsets],
   [$D_4$-conjugation-invariant], [32], [158], [fails],
@@ -172,7 +176,7 @@ All code is dimension-independent; running it on $C_4$ ($16$ children, $64$ pane
   [$Z_4$-invariant], [6912], [158], [fails],
   [suspension of the 3D solution ($pi_v = pi^((3))_(v')$ or $(3 a) pi^((3))_(v')$)], [6], [840], [fails],
   [coordinate descent on $|Sigma(P_0)|$, random starts], [—], [plateau 1566], [fails],
-))]
+), caption: [Families of frame assignments of $C_4$ tested for coarsening closure (C1). For the certified 3D assignment the corresponding value of $|Sigma(P_0)|$ is $44 = 2|P_0| - 16$; all 4D families stay far above $2|P_0|$.]) <tab:N4>
 
 Two facts about the failures are worth recording. First, in every case examined the _first_ coarsening step produces only aligned supertile poses; offsets appear only after the closure has grown (@fig:closure). In other words, the pairwise child rules do force supertiles to meet face-to-face, and what fails is that the enlarged rule no longer coincides with the original one—a failure of _self-similarity_ of the marking rather than of local rigidity. Second, the objective $|Sigma(P_0)|$ has very large plateaus (value 1566 for generic assignments, 158 for the canonical-type ones), which defeats local search; in $N = 3$ the same plateau (value 158) contains 693 of the 2187 assignments, while the solution is an isolated minimum.
 
@@ -191,7 +195,9 @@ Following the standard encoding technique (Goodman-Strauss @gs98 @gs2026), a fac
 
 #thm("Construction sketch", [keys and locks])[Let $F_j subset partial C_N$ ($j = 1, dots, N 2^N$) be the panels. (1) On each panel place an asymmetric $(N-1)$-dimensional relief of height $epsilon < 1\/8$ (a protrusion on "key" panels, a matching depression on "lock" panels) whose shape depends on the panel index. (2) Choose the reliefs so that panel $a$ of one tile fits flush against panel $b$ of another, in relative orientation $g$, if and only if $(a, b, g) in F^*$, and so that no partial (off-lattice) overlaps of reliefs are possible. (3) Set $Q_N := (C_N without union.big_("locks") P_j^-) union union.big_("keys") P_j^+$.]
 
-Step (2) is where the actual work lies; for $N = 3$ the published Chair44 shape @tsiokos is such a realisation of an equivalent rule set (Flicker @flicker shows the arrow rules and Chair44 are equivalent). We do not claim a new polyhedron here: Theorem A is a statement about a _marked_ tile with facet matching rules, and lattice registration is an assumption in our model that a polyhedral realisation must enforce by shape.
+#figure(image("fig/keys.png", width: 100%), caption: [Keys and locks in cross-section. (a) An asymmetric relief of height $epsilon$ on panel $a$ (key) and its complement on panel $b$ (lock). (b) The two panels fit flush only in the relative orientations $g$ for which $(a,b,g) in F^*$. (c) In any other relative orientation the reliefs overlap, so the placement is impossible.]) <fig:keys>
+
+@fig:keys illustrates the construction. Step (2) is where the actual work lies; for $N = 3$ the published Chair44 shape @tsiokos is such a realisation of an equivalent rule set (Flicker @flicker shows the arrow rules and Chair44 are equivalent). We do not claim a new polyhedron here: Theorem A is a statement about a _marked_ tile with facet matching rules, and lattice registration is an assumption in our model that a polyhedral realisation must enforce by shape.
 
 = Conditional strong aperiodicity <sec:cond>
 
@@ -207,14 +213,16 @@ For $N = 3$ and the marked tile of Theorem A, hypotheses (1) and (3) are supplie
 
 = Dimensional summary
 
-#block(breakable: false)[#align(center, table(columns: 6, align: center, stroke: 0.4pt, inset: 4pt,
+@tab:dim summarises the situation dimension by dimension.
+
+#figure(table(columns: 6, align: center, stroke: 0.4pt, inset: 4pt,
   [*$N$*], [*prototile*], [*volume*], [*children*], [*panels*], [*status / bound*],
   [2], [L-tromino], [3], [4], [8 edges], [2-tile enforcement known @gs99b],
   [3], [Chair44; marked $C_3$ of Thm. Theorem A], [7], [8], [24], [verified; $|"Aut"| <= 24$],
   [4], [tesseract chair], [15], [16], [64], [Problem 9.1; conditional bound 192],
   [5], [penteract chair], [31], [32], [160], [open; conditional bound 1920],
   [$N$], [hypercube chair], [$2^N - 1$], [$2^N$], [$N 2^N$], [conditional bound $2^(N-1) N!$],
-))]
+), caption: [The chair in dimensions 2–5 and the status of matching rules for it.]) <tab:dim>
 
 = Future work
 
@@ -242,12 +250,15 @@ Relative poses $(g, t)$ of a touching tile with respect to the reference tile (c
 
 #heading(numbering: none)[Appendix B: human inquiry record]
 
-This research was conducted through an iterative human–AI collaboration on Arena.ai. Chronological summary of the human prompts by Dmitry Kamenetsky:
-- *Prompt 1.* "recently chair44 was discovered. A 3D shape that can tile space non-periodically. Investigate whether the same techniques can be extended to any N-D space." → analysis of the Chair44 mechanism and of $C_N$.
-- *Prompt 2.* "Is this a novel result? If so, can you prepare an arXiv paper about it with references and proofs." → first draft.
-- *Prompt 3.* Authorship, contribution statement, diagrams, PDF.
-- *Prompt 4.* Citation and figure corrections.
-- *Prompt 5.* Tiling visualisations, this appendix, verification of proofs.
-- *Prompts 6–7.* External review feedback addressed: corrected $T_0$, the inradius/supremum argument, injectivity of $L$, references, and reframing of $N >= 4$ as a programme.
-- *Prompt 8.* "Can you add the corrections and make it a genuine research contribution." → the frame-marking formalism, the finite certificate, Theorems A and B, the $N = 4$ computations and Problem 9.1 (this version).
+This research was conducted through an iterative human–AI collaboration on Arena.ai. Chronological summary of the human prompts by Dmitry Kamenetsky and of what the AI changed in response:
+- *Prompt 1 (problem conception).* "recently chair44 was discovered. A 3D shape that can tile space non-periodically. Investigate whether the same techniques can be extended to any N-D space." → The AI analysed the Chair44 mechanism, reviewed the corner-deleted hypercube $C_N$, and initiated the multidimensional extension study.
+- *Prompt 2 (preprint and novelty).* "excellent! Is this a novel result? If so, can you prepare an arXiv paper about it with references and proofs." → Coordinate proofs, literature comparison, and a first formatted preprint.
+- *Prompt 3 (authorship and diagrams).* Add the author and the AI to the author list; state that the work was done by the AI on the author's suggestion; add diagrams of the $N$-dimensional tiles and tilings; produce a PDF. → Authorship metadata and contribution statement, vector diagrams, Typst compilation toolchain.
+- *Prompt 4 (refinement and citations).* Reference numbers for Goodman-Strauss and Flicker; quotation marks in "einstein"; repositioned figure text; expanded boxes; novelty text; clipping fix; cleaned references. → Figure text placement, citation anchors, diagram clipping, metadata.
+- *Prompt 5 (tiling visualisations, appendix, verification).* Figures of actual tilings; this appendix; wording of the contribution statement; verification of all proofs and formatting. → Space-filling patches for 2D, 3D and 4D cross-sections, Appendix A of that version, mathematical audit.
+- *Prompts 6–7 (external review).* "I gave this paper to another AI to review and it said that it cannot be published. Here is its feedback. Can you address the feedback and fix the paper? Can we still salvage some of it that is novel for a publication?" → Corrected $T_0$; fixed the inradius/supremum chain so that it proves $gamma^m = "id"$; derived finiteness and the symmetry bound via the injective projection $L : "Aut"(cal(T)) arrow O(N)$; cited Goodman-Strauss (1999); renumbered references; reframed $N >= 4$ as a programme; aligned all claims with the expository scope.
+- *Prompt 8 (research contribution).* "Can you add the corrections and make it a genuine research contribution." → The frame-marking formalism, the finite certificate (Proposition 7.1), the $N = 3$ certificate (Theorem A) and rigidity scan (Theorem B), the $N = 4$ computations and Problem 9.1, the accompanying code.
+- *Prompt 9 (presentation).* Shorter title; removal of the internal "what is new" subsection in favour of a contributions section; typographic fixes (theorem environments, section numbering, stray symbols); proofs of Theorems A and B written out; unbreakable tables; GitHub repository; appendices after the references; figure of the supertile re-oriented to show the socket. → All applied; repository `dimkadimon/Monotile-RN` created and linked.
+- *Prompt 10 (completion of the $Z_4$ search).* "Yes update the table once the code finishes running." → The $Z_4$-symmetric family (6912 assignments) was completed and the table updated; duplicated cross-reference words removed; version number, figure caption and future-work section added.
+- *Prompt 11 (this version).* Keys-and-locks figure restored; contributions section rewritten for a general audience; two-line title; matching colours in Figure 1; table captions and references; this detailed record.
 

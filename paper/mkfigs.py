@@ -11,14 +11,14 @@ fig = plt.figure(figsize=(11, 5))
 ax = fig.add_subplot(1, 2, 1, projection='3d')
 grid = np.zeros((4, 4, 4), dtype=int) - 1
 keys = ['0'] + [v for v in ch.U]
-cols = plt.cm.tab10(np.linspace(0, 1, 10))
+cols = plt.cm.Set3(np.linspace(0, 1, 12))[[0,4,3,5,6,7,9,11]]
 for idx, (h, tau) in enumerate(ch.children):
     for c in ch.cubes((h, tau)):
         u = tuple((x - 1) // 2 for x in c); grid[u] = idx
 filled = grid >= 0
 facecolors = np.empty(grid.shape + (4,), dtype=float)
 for idx in range(8): facecolors[grid == idx] = cols[idx]
-ax.voxels(filled, facecolors=facecolors, edgecolor='k', linewidth=0.4, alpha=0.95)
+ax.voxels(filled, facecolors=facecolors, edgecolor='k', linewidth=0.4, shade=False)
 ax.set_xlabel('x'); ax.set_ylabel('y'); ax.set_zlabel('z'); ax.set_title(r'Level-1 supertile $2C_3$: 8 children')
 ax.view_init(elev=25, azim=40)
 ax2 = fig.add_subplot(1, 2, 2); ax2.axis('off')
@@ -33,7 +33,7 @@ for idx, k in enumerate(keys):
 tab = ax2.table(cellText=rows[1:], colLabels=rows[0], loc='center', cellLoc='center', colWidths=[0.11,0.13,0.14,0.16,0.3])
 tab.auto_set_font_size(False); tab.set_fontsize(8); tab.scale(1.15, 1.5)
 for idx in range(8):
-    tab[(idx+1, 0)].set_facecolor(cols[idx]); tab[(idx+1, 0)].set_alpha(0.6)
+    tab[(idx+1, 0)].set_facecolor(cols[idx])
 ax2.set_title('Certified frame assignment (frames30)', fontsize=10)
 plt.tight_layout(); plt.savefig('fig/supertile3.png', dpi=200); plt.close()
 
