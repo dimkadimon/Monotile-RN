@@ -15,7 +15,7 @@
 #align(center)[
   #text(16pt, weight: "bold")[Towards Strongly Aperiodic Monotiles \ in Higher Dimensions]
   #v(0.5em)
-  Dmitry Kamenetsky \ #text(9pt)[dkamenetsky\@gmail.com] \ #text(9pt)[September 30, 2026 — version 11]
+  Dmitry Kamenetsky \ #text(9pt)[dkamenetsky\@gmail.com] \ #text(9pt)[October 1, 2026 — version 12]
 ]
 
 #block(inset: (x: 1.5em))[
@@ -120,7 +120,7 @@ The proposition supplies hypothesis (3) of Theorem 11.1, and (C1) also gives hyp
 
 = The three-dimensional case: an independent certificate <sec:N3>
 
-#figure(image("fig/supertile3.png", width: 100%), caption: [Left: the level-1 supertile $2C_3$ and its eight children, viewed from the socket side; the central translate $T_0$ (blue) is visible at the bottom of the socket, and the child $T_(000)$ (blue) is at the back and hidden. Right: the certified frame assignment. "Position" is the corner $2v$ of the $2 times 2 times 2$ block $B_v = 2v + [0,2]^3$ occupied by the child, i.e. the $(x,y,z)$ coordinates of the lowest corner of its bounding cube in units of unit cubes (for $T_0$ it is the translation vector $(1,1,1)$). Permutations are written as tuples $pi = (pi(0), pi(1), pi(2))$ acting on $0$-indexed coordinates; the sign flips are $D_(s(v))$. All eight child maps are proper rotations (homochiral).]) <fig:sup>
+#figure(image("fig/supertile3.png", width: 100%), caption: [Left: the level-1 supertile $2C_3$ and its eight children, viewed from the socket side. Tiles are drawn semi-transparent with only their outlines, so the shape of every chair can be seen: the central translate $T_0$ (teal) sits at the bottom of the socket and the child $T_(000)$ (blue) is at the back, visible through the front tiles. Right: the certified frame assignment. "Position" is the corner $2v$ of the $2 times 2 times 2$ block $B_v = 2v + [0,2]^3$ occupied by the child, i.e. the $(x,y,z)$ coordinates of the lowest corner of its bounding cube in units of unit cubes (for $T_0$ it is the translation vector $(1,1,1)$). Permutations are written as tuples $pi = (pi(0), pi(1), pi(2))$ acting on $0$-indexed coordinates; the sign flips are $D_(s(v))$. All eight child maps are proper rotations (homochiral).]) <fig:sup>
 
 #thm("Theorem A", [verified matching rules for the 3D chair])[
 For the homochiral frame assignment of @fig:sup, conditions (C1)–(C3) hold. Consequently, with $F^*$ the induced facet rules (135 facet-contact triples on the 24 panels of $C_3$), every lattice-registered $F^*$-tiling of $RR^3$ is uniquely hierarchical, every such tiling is strongly aperiodic, and $|"Aut"(cal(T))| <= 24$ for each of them.]
@@ -151,9 +151,7 @@ The computation produces the data of @tab:N3.
   [DFS node limit reached], [never],
 ), caption: [Data produced by the certificate for $N = 3$ (Theorem A).]) <tab:N3>
 
-#figure(image("fig/tiling3.png", width: 100%), caption: [Hierarchical tilings by the certified marked chair. (a) The level-2 supertile $4C_3$ (64 tiles, one colour per tile). (b) The same with a corner block removed, showing the interior. (c) A horizontal slice through the level-3 supertile $8C_3$ (512 tiles); black lines are tile boundaries. By Theorem A every tiling of $RR^3$ obeying $F^*$ is built from such supertiles at every level.]) <fig:tiling>
-
-@fig:tiling shows the supertiles of levels 2 and 3 for the certified assignment. *Comparison with the published constructions.* Flicker @flicker reports for Chair44: 2388 bare contacts, 44 allowed by the arrow rules of which 30 occur in infinite tilings, 33 one-shell clusters, 15 admitting a second shell, all containing the same complete "Superchair". Goodman-Strauss @gs2026 describes the same mechanism in Berger's style (every marked tile lies in a marked supertile with the same corner markings; supertiles meet only fully face-to-face; $|"Aut"| <= 24$). Our numbers coincide term by term although our marking (the full frame) and our rule (the closed contact language) were derived without reference to either paper. We regard this as an independent verification of the Chair44 mechanism at the level of the combinatorial matching rules. What the present note does _not_ do is re-derive the specific polyhedral shape; see @sec:poly.
+*Comparison with the published constructions.* Flicker @flicker reports for Chair44: 2388 bare contacts, 44 allowed by the arrow rules of which 30 occur in infinite tilings, 33 one-shell clusters, 15 admitting a second shell, all containing the same complete "Superchair". Goodman-Strauss @gs2026 describes the same mechanism in Berger's style (every marked tile lies in a marked supertile with the same corner markings; supertiles meet only fully face-to-face; $|"Aut"| <= 24$). Our numbers coincide term by term although our marking (the full frame) and our rule (the closed contact language) were derived without reference to either paper. We regard this as an independent verification of the Chair44 mechanism at the level of the combinatorial matching rules. What the present note does _not_ do is re-derive the specific polyhedral shape; see @sec:poly.
 
 *Strong aperiodicity.* $P^*$ consists of proper relative rotations only, so all tiles of an $F^*$-tiling share one handedness and $L("Aut"(cal(T))) subset.eq B_3^+$; Theorem 11.1 then gives $|"Aut"(cal(T))| <= 24$ and the absence of translations and screw motions.
 
@@ -264,5 +262,7 @@ This research was conducted through an iterative human–AI collaboration on Are
 - *Prompt 10 (completion of the $Z_4$ search).* "Yes update the table once the code finishes running." → The $Z_4$-symmetric family (6912 assignments) was completed and the table updated; duplicated cross-reference words removed; version number, figure caption and future-work section added.
 - *Prompt 11 (accessibility).* Keys-and-locks figure restored; contributions section rewritten for a general audience; two-line title; matching colours in Figure 1; table captions and references; this detailed record.
 
-- *Prompt 12 (this version).* Each contribution in @sec:contrib tagged as new or previously known, with the relevant citations; Figure 1 caption corrected ($T_(000)$ is blue); a figure of actual tilings added (level-2 supertile with cutaway and a level-3 slice, @fig:tiling); a LaTeX source of the paper generated from the Typst source for arXiv submission (`paper.tex`, `refs.bib`, in the repository).
+- *Prompt 12 (novelty and LaTeX).* Each contribution in @sec:contrib tagged as new or previously known, with the relevant citations; Figure 1 caption corrected ($T_(000)$ is blue); a LaTeX source of the paper generated from the Typst source for arXiv submission (`paper.tex`, `refs.bib`, in the repository).
+
+- *Prompt 13 (this version).* The tilings figure was judged confusing and removed; the blocks in Figure 1 were made semi-transparent so that the individual tiles are easier to distinguish.
 

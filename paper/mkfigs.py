@@ -15,10 +15,24 @@ cols = plt.cm.Set3(np.linspace(0, 1, 12))[[0,4,3,5,6,7,9,11]]
 for idx, (h, tau) in enumerate(ch.children):
     for c in ch.cubes((h, tau)):
         u = tuple((x - 1) // 2 for x in c); grid[u] = idx
-filled = grid >= 0
-facecolors = np.empty(grid.shape + (4,), dtype=float)
-for idx in range(8): facecolors[grid == idx] = cols[idx]
-ax.voxels(filled, facecolors=facecolors, edgecolor='k', linewidth=0.4, shade=False)
+from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+def cube_faces(u):
+    x,y,z=u
+    P=lambda a,b,c:(x+a,y+b,z+c)
+    return {(0,-1):[P(0,0,0),P(0,1,0),P(0,1,1),P(0,0,1)], (0,1):[P(1,0,0),P(1,1,0),P(1,1,1),P(1,0,1)],
+            (1,-1):[P(0,0,0),P(1,0,0),P(1,0,1),P(0,0,1)], (1,1):[P(0,1,0),P(1,1,0),P(1,1,1),P(0,1,1)],
+            (2,-1):[P(0,0,0),P(1,0,0),P(1,1,0),P(0,1,0)], (2,1):[P(0,0,1),P(1,0,1),P(1,1,1),P(0,1,1)]}
+# draw only the outer faces of each tile (internal cube-cube faces of the same tile are omitted)
+for idx in range(8):
+    faces=[]
+    for u in zip(*np.where(grid==idx)):
+        for (ax_,sg),poly in cube_faces(u).items():
+            nb=list(u); nb[ax_]+=sg
+            if not (0<=nb[ax_]<4) or grid[tuple(nb)]!=idx: faces.append(poly)
+    col=list(cols[idx]); col[3]=0.45
+    ax.add_collection3d(Poly3DCollection(faces, facecolors=[col]*len(faces), edgecolors=(0,0,0,0.9), linewidths=0.7))
+ax.set_xlim(0,4); ax.set_ylim(0,4); ax.set_zlim(0,4); ax.set_box_aspect((1,1,1)); ax.grid(False)
+for a in (ax.xaxis, ax.yaxis, ax.zaxis): a.set_pane_color((1,1,1,0)); a.set_ticks([0,1,2,3,4])
 ax.set_xlabel('x'); ax.set_ylabel('y'); ax.set_zlabel('z'); ax.set_title(r'Level-1 supertile $2C_3$: 8 children')
 ax.view_init(elev=25, azim=40)
 ax2 = fig.add_subplot(1, 2, 2); ax2.axis('off')
