@@ -1,0 +1,116 @@
+berger:
+  type: article
+  title: The undecidability of the domino problem
+  author: Berger, R.
+  date: 1966
+  parent: {type: periodical, title: Mem. Amer. Math. Soc.}
+  volume: 66
+  page-range: 1–72
+robinson:
+  type: article
+  title: Undecidability and nonperiodicity for tilings of the plane
+  author: Robinson, R. M.
+  date: 1971
+  parent: {type: periodical, title: Invent. Math.}
+  volume: 12
+  page-range: 177–209
+penrose:
+  type: article
+  title: The role of aesthetics in pure and applied mathematical research
+  author: Penrose, R.
+  date: 1974
+  parent: {type: periodical, title: Bull. Inst. Math. Appl.}
+  volume: 10
+  page-range: 266–271
+gs98:
+  type: article
+  title: Matching rules and substitution tilings
+  author: Goodman-Strauss, C.
+  date: 1998
+  parent: {type: periodical, title: Ann. of Math.}
+  volume: 147
+  page-range: 181–223
+gs99:
+  type: article
+  title: An aperiodic pair of tiles in E^n for all n ≥ 3
+  author: Goodman-Strauss, C.
+  date: 1999
+  parent: {type: periodical, title: European J. Combin.}
+  volume: 20
+  page-range: 385–395
+gs99b:
+  type: article
+  title: A small aperiodic set of planar tiles
+  author: Goodman-Strauss, C.
+  date: 1999
+  parent: {type: periodical, title: European J. Combin.}
+  volume: 20
+  page-range: 375–384
+schmitt:
+  type: report
+  title: An aperiodic prototile in space
+  author: Schmitt, P.
+  date: 1988
+  organization: Universität Wien
+danzer:
+  type: chapter
+  title: A family of 3D-spacefillers not permitting any periodic or quasiperiodic tiling
+  author: Danzer, L.
+  date: 1995
+  parent: {type: book, title: "Aperiodic '94", publisher: World Scientific}
+  page-range: 11–17
+hat:
+  type: article
+  title: An aperiodic monotile
+  author: [Smith, D., Myers, J. S., Kaplan, C. S., Goodman-Strauss, C.]
+  date: 2024
+  parent: {type: periodical, title: Combinatorial Theory}
+  volume: 4
+  issue: 1
+  serial-number: {arxiv: "2303.10798"}
+spectre:
+  type: article
+  title: A chiral aperiodic monotile
+  author: [Smith, D., Myers, J. S., Kaplan, C. S., Goodman-Strauss, C.]
+  date: 2024
+  parent: {type: periodical, title: Combinatorial Theory}
+  volume: 4
+  issue: 2
+gt:
+  type: article
+  title: The periodic tiling conjecture fails in high dimensions
+  author: [Greenfeld, R., Tao, T.]
+  date: 2024
+  parent: {type: periodical, title: Ann. of Math.}
+  volume: 200
+  page-range: 301–363
+tsiokos:
+  type: article
+  title: A strongly aperiodic monotile in three dimensions
+  author: Tsiokos, I.
+  date: 2026
+  serial-number: {arxiv: "2609.19214"}
+gs2026:
+  type: article
+  title: Notes on a strongly aperiodic monotile in E^3
+  author: Goodman-Strauss, C.
+  date: 2026
+  serial-number: {arxiv: "2609.24779"}
+flicker:
+  type: article
+  title: Matching rules for a three-dimensional strongly aperiodic monotile
+  author: Flicker, F.
+  date: 2026
+  serial-number: {arxiv: "2609.23783"}
+golomb:
+  type: book
+  title: "Polyominoes: Puzzles, Patterns, Problems, and Packings"
+  author: Golomb, S. W.
+  date: 1994
+  publisher: Princeton University Press
+gs87:
+  type: book
+  title: Tilings and Patterns
+  author: [Grünbaum, B., Shephard, G. C.]
+  date: 1987
+  publisher: W. H. Freeman
