@@ -13,7 +13,7 @@
 #align(center)[
   #text(16pt, weight: "bold")[Towards Strongly Aperiodic Monotiles in Higher Dimensions]
   #v(0.5em)
-  Dmitry Kamenetsky \ #text(9pt)[dkamenetsky\@gmail.com] \ #text(9pt)[September 30, 2026 — version 8]
+  Dmitry Kamenetsky \ #text(9pt)[dkamenetsky\@gmail.com] \ #text(9pt)[September 30, 2026 — version 9]
 ]
 
 #block(inset: (x: 1.5em))[
@@ -32,7 +32,7 @@ In three dimensions the Schmitt–Conway–Danzer biprism @schmitt @danzer tiles
 
 The published treatments of Chair44 are a construction (Tsiokos @tsiokos), a Berger-style proof in which the matching rules are read off from corner and socket markings (Goodman-Strauss @gs2026), and a computer enumeration of the contact graph of an equivalent arrow rule set (Flicker @flicker: 2388 bare contacts, 44 allowed, 33 one-shell clusters, 15 second shells). Goodman-Strauss's 1999 paper @gs99 gives an aperiodic _pair_ of tiles for the notched-cube substitution in every dimension $N >= 3$, and remarks in @gs2026 that shape and substitution generalise, without addressing whether a single marked tile does. Against this background the present note contributes the following.
 
-1. *A dimension-independent formalism for chair matching rules* (Section @sec:frames). The marked tile is $C_N$ together with its full orientation frame, and the matching rule is _derived_: it is the set of relative poses occurring between tiles in hierarchical tilings (the hierarchical language), closed under coarsening. In the literature the rules of Chair44 were designed by hand and verified afterwards; here the substitution itself dictates the rule, and the only free data are the $2^N - 1$ child frames. This makes "find matching rules for the chair in $RR^N$" a finite problem in every dimension.
+1. *A dimension-independent formalism for chair matching rules* (@sec:frames). The marked tile is $C_N$ together with its full orientation frame, and the matching rule is _derived_: it is the set of relative poses occurring between tiles in hierarchical tilings (the hierarchical language), closed under coarsening. In the literature the rules of Chair44 were designed by hand and verified afterwards; here the substitution itself dictates the rule, and the only free data are the $2^N - 1$ child frames. This makes "find matching rules for the chair in $RR^N$" a finite problem in every dimension.
 
 2. *A finite certificate for unique hierarchy* (Proposition 7.1): coarsening closure (C1), tightness of the induced facet rules (C2), and a two-shell enclosure analysis (C3). Its proof is a short scaling induction. Flicker's enumeration @flicker is the special case $N = 3$ of (C3) for a hand-designed rule; conditions (C1)–(C2) are what allow the induction to pass to all levels without further computation.
 
@@ -40,9 +40,9 @@ The published treatments of Chair44 are a construction (Tsiokos @tsiokos), a Ber
 
 4. *Theorem B (rigidity).* Among all $3^7 = 2187$ homochiral frame assignments of the 3D substitution with a translated central child, exactly three—one orbit under conjugation by coordinate permutations—are coarsening-closed. The Chair44 marking is thus not a choice but is forced by self-similarity. No statement of this kind appears in @tsiokos @gs2026 @flicker.
 
-5. *Four dimensions* (Section @sec:N4). The pipeline runs on $C_4$ unchanged. The natural generalisations (the canonical assignment, the $D_4$-, $Z_2 times Z_2$- and $Z_4$-symmetric families, a suspension of the 3D solution) are shown _not_ to be self-similar, and the precise finite problem that remains is stated (Problem 9.1) together with software that decides condition (C1) for any candidate in about two seconds.
+5. *Four dimensions* (@sec:N4). The pipeline runs on $C_4$ unchanged. The natural generalisations (the canonical assignment, the $D_4$-, $Z_2 times Z_2$- and $Z_4$-symmetric families, a suspension of the 3D solution) are shown _not_ to be self-similar, and the precise finite problem that remains is stated (Problem 9.1) together with software that decides condition (C1) for any candidate in about two seconds.
 
-6. *Expository material and a conditional theorem.* The explicit rep-$2^N$ dissection (Section @sec:dissect) and Theorem 11.1 (strong aperiodicity and the bound $|"Aut"| <= 2^(N-1) N!$ under lattice registration and hierarchical enforcement) are included to make the note self-contained; the theorem is standard in spirit and we claim no novelty for it.
+6. *Expository material and a conditional theorem.* The explicit rep-$2^N$ dissection (@sec:dissect) and Theorem 11.1 (strong aperiodicity and the bound $|"Aut"| <= 2^(N-1) N!$ under lattice registration and hierarchical enforcement) are included to make the note self-contained; the theorem is standard in spirit and we claim no novelty for it.
 
 All code is available at #link("https://github.com/dimkadimon/Monotile-RN")[github.com/dimkadimon/Monotile-RN] (Python 3, standard library plus NumPy for figures).
 
@@ -67,7 +67,7 @@ For $N = 2$ the chair is the L-tromino (3 cells, 8 edges); $C_3$ has 7 cubes and
 
 = The rep-$2^N$ dissection (classical) <sec:dissect>
 
-The self-similarity of the corner-deleted hypercube is classical (Golomb @golomb; Goodman-Strauss @gs99 @gs2026). We record the explicit coordinates because the frame assignment of Section @sec:frames refers to them.
+The self-similarity of the corner-deleted hypercube is classical (Golomb @golomb; Goodman-Strauss @gs99 @gs2026). We record the explicit coordinates because the frame assignment of @sec:frames refers to them.
 
 #thm("Theorem", [rep-$2^N$ dissection])[For every $N >= 2$ the scaled tile $2C_N = [0,4]^N without (2,4]^N$ is the union, with disjoint interiors, of $2^N$ congruent copies of $C_N$:
 $ 2C_N = T_0 union union.big_(v in U_N) T_v, quad T_0 = C_N + (1,dots,1), quad T_v = 2v + D_(s(v)) C_N + c(v), $
@@ -90,7 +90,7 @@ and level-$k$ supertiles are defined recursively. We call the assignment _homoch
 
 *Coarsening.* For a pose set $P$ let $Sigma(P)$ be the set of _pairwise admissible supertile poses_: poses $(G,T)$ of a level-1 supertile touching the reference supertile such that all $2^N times 2^N$ child pairs are interior-disjoint and every touching pair has relative pose in $P$. Such a pose is _aligned_ if $T in 2 ZZ^N$ and an _offset_ otherwise. The _coarsening closure_ $P^*$ of $P_0$ is obtained by iterating $P_(i+1) = P_i union {(G, T\/2) : (G,T) in Sigma(P_i) "aligned"}$ until it stabilises; it exists only if no offset pose ever becomes admissible. We say the assignment is _coarsening-closed_ if $P^*$ exists and $Sigma(P^*) = 2P^*$ (equality, not just inclusion): the rule reproduces itself exactly one level up.
 
-*Facet rules and tightness.* Number the $N 2^N$ panels of $C_N$. A pose $p in P$ induces the set $F(p)$ of _facet triples_ $(a, b, g)$: panel $a$ of the reference tile meets panel $b$ of the tile in pose $p = (g, t)$. Let $F^* = union_(p in P^*) F(p)$ be the _facet rules_ and $P_(F^*)$ the set of touching poses all of whose facet triples lie in $F^*$. Clearly $P^* subset.eq P_(F^*)$; the rule is _tight_ if $P_(F^*) = P^*$. When tight, "$P^*$-tiling" is a genuinely local condition: each facet contact is checked separately against $F^*$, so $F^*$ can be realised by keys and locks on the panels (Section @sec:poly). Note that $F^*$ constrains the relative _orientation_ $g$ of the two facing panels, not just their identities—this is what an asymmetric relief on each panel encodes.
+*Facet rules and tightness.* Number the $N 2^N$ panels of $C_N$. A pose $p in P$ induces the set $F(p)$ of _facet triples_ $(a, b, g)$: panel $a$ of the reference tile meets panel $b$ of the tile in pose $p = (g, t)$. Let $F^* = union_(p in P^*) F(p)$ be the _facet rules_ and $P_(F^*)$ the set of touching poses all of whose facet triples lie in $F^*$. Clearly $P^* subset.eq P_(F^*)$; the rule is _tight_ if $P_(F^*) = P^*$. When tight, "$P^*$-tiling" is a genuinely local condition: each facet contact is checked separately against $F^*$, so $F^*$ can be realised by keys and locks on the panels (@sec:poly). Note that $F^*$ constrains the relative _orientation_ $g$ of the two facing panels, not just their identities—this is what an asymmetric relief on each panel encodes.
 
 = A finite certificate for unique hierarchy <sec:cert>
 
@@ -116,14 +116,12 @@ The proposition supplies hypothesis (3) of Theorem 11.1, and (C1) also gives hyp
 
 = The three-dimensional case: an independent certificate <sec:N3>
 
-#figure(image("fig/supertile3.png", width: 100%), caption: [Left: the level-1 supertile $2C_3$ and its eight children (the central translate $T_0$ is visible at the bottom of the socket). Right: the certified frame assignment. Permutations are written as tuples $pi = (pi(0), pi(1), pi(2))$ acting on $0$-indexed coordinates; the sign flips are $D_(s(v))$. All eight child maps are proper rotations (homochiral).]) <fig:sup>
+#figure(image("fig/supertile3.png", width: 100%), caption: [Left: the level-1 supertile $2C_3$ and its eight children, viewed from the socket side; the central translate $T_0$ (blue) is visible at the bottom of the socket, and the child $T_(000)$ (orange) is at the back and hidden. Right: the certified frame assignment. "Position" is the corner $2v$ of the $2 times 2 times 2$ block $B_v = 2v + [0,2]^3$ occupied by the child, i.e. the $(x,y,z)$ coordinates of the lowest corner of its bounding cube in units of unit cubes (for $T_0$ it is the translation vector $(1,1,1)$). Permutations are written as tuples $pi = (pi(0), pi(1), pi(2))$ acting on $0$-indexed coordinates; the sign flips are $D_(s(v))$. All eight child maps are proper rotations (homochiral).]) <fig:sup>
 
 #thm("Theorem A", [verified matching rules for the 3D chair])[
-For the homochiral frame assignment of Figure @fig:sup, conditions (C1)–(C3) hold. Consequently, with $F^*$ the induced facet rules (135 facet-contact triples on the 24 panels of $C_3$), every lattice-registered $F^*$-tiling of $RR^3$ is uniquely hierarchical, every such tiling is strongly aperiodic, and $|"Aut"(cal(T))| <= 24$ for each of them.]
+For the homochiral frame assignment of @fig:sup, conditions (C1)–(C3) hold. Consequently, with $F^*$ the induced facet rules (135 facet-contact triples on the 24 panels of $C_3$), every lattice-registered $F^*$-tiling of $RR^3$ is uniquely hierarchical, every such tiling is strongly aperiodic, and $|"Aut"(cal(T))| <= 24$ for each of them.]
 
-#figure(image("fig/funnel.png", width: 100%), caption: [The certificate for $N = 3$. Each arrow is a finite computation; the whole run takes about 2 s.]) <fig:funnel>
-
-#pf[The proof is a finite computation, organised as in Proposition 7.1 (Figure @fig:funnel); it is carried out by `cert6.py` in the repository, and every intermediate object is stored in `cert6_N3triv.pkl`.
+#pf[The proof is a finite computation, organised as in Proposition 7.1 (2388 touching poses $arrow$ 44 admissible $arrow$ 33 enclosures $arrow$ 15 live $arrow$ one complete supertile); it is carried out by `cert6.py` in the repository, and every intermediate object is stored in `cert6_N3triv.pkl`.
 
 _(C1)_ The hierarchical language is computed as the least fixed point $P_0 = P_1 union X(P_0)$; it stabilises at level 3 with $|P_0| = 30$. The pairwise admissible supertile poses are enumerated by generating, for every child $a$ of the reference supertile and every $p in P_0$, the tile $b$ in relative pose $p$ to $a$, and every supertile placement having $b$ as one of its eight children; each candidate is kept if all $64$ child pairs are interior-disjoint and all touching pairs lie in $P_0$. This gives $|Sigma(P_0)| = 44$ poses, all aligned; halving their translations yields $P_1 = P_0 union 14$ new poses. Repeating with $P_1$ gives $Sigma(P_1) = 2P_1$ exactly, so $P^* = P_1$, $|P^*| = 44$, and no offset pose is ever admissible.
 
@@ -149,14 +147,14 @@ The computation produces the following data.
   [DFS node limit reached], [never],
 ))]
 
-*Comparison with the published constructions.* Flicker @flicker reports for Chair44: 2388 bare contacts, 44 allowed by the arrow rules of which 30 occur in infinite tilings, 33 one-shell clusters, 15 admitting a second shell, all containing the same complete "Superchair". Goodman-Strauss @gs2026 describes the same mechanism in Berger's style (every marked tile lies in a marked supertile with the same corner markings; supertiles meet only fully face-to-face; $|"Aut"| <= 24$). Our numbers coincide term by term although our marking (the full frame) and our rule (the closed contact language) were derived without reference to either paper. We regard this as an independent verification of the Chair44 mechanism at the level of the combinatorial matching rules. What the present note does _not_ do is re-derive the specific polyhedral shape; see Section @sec:poly.
+*Comparison with the published constructions.* Flicker @flicker reports for Chair44: 2388 bare contacts, 44 allowed by the arrow rules of which 30 occur in infinite tilings, 33 one-shell clusters, 15 admitting a second shell, all containing the same complete "Superchair". Goodman-Strauss @gs2026 describes the same mechanism in Berger's style (every marked tile lies in a marked supertile with the same corner markings; supertiles meet only fully face-to-face; $|"Aut"| <= 24$). Our numbers coincide term by term although our marking (the full frame) and our rule (the closed contact language) were derived without reference to either paper. We regard this as an independent verification of the Chair44 mechanism at the level of the combinatorial matching rules. What the present note does _not_ do is re-derive the specific polyhedral shape; see @sec:poly.
 
 *Strong aperiodicity.* $P^*$ consists of proper relative rotations only, so all tiles of an $F^*$-tiling share one handedness and $L("Aut"(cal(T))) subset.eq B_3^+$; Theorem 11.1 then gives $|"Aut"(cal(T))| <= 24$ and the absence of translations and screw motions.
 
 #thm("Theorem B", [rigidity of the 3D marking])[
-Consider all $3^7 = 2187$ homochiral frame assignments of the eight children of $2C_3$ with $pi_0 = "id"$. Exactly three of them are coarsening-closed with $|P^*| <= 300$, namely the assignment of Figure @fig:sup and its two conjugates under cyclic permutation of the coordinates (the assignment is invariant under conjugation by the transposition of coordinates 0 and 2). For the other 2184 the closure iteration either produces admissible offset supertile poses (6 assignments) or exceeds 300 poses within two steps without having stabilised (2178 assignments).]
+Consider all $3^7 = 2187$ homochiral frame assignments of the eight children of $2C_3$ with $pi_0 = "id"$. Exactly three of them are coarsening-closed with $|P^*| <= 300$, namely the assignment of @fig:sup and its two conjugates under cyclic permutation of the coordinates (the assignment is invariant under conjugation by the transposition of coordinates 0 and 2). For the other 2184 the closure iteration either produces admissible offset supertile poses (6 assignments) or exceeds 300 poses within two steps without having stabilised (2178 assignments).]
 
-#pf[This is again a finite computation (`scan3.py`, `closure_scan3.py`). For each of the $3^7$ assignments the hierarchical language $P_0$ and the coarsening iteration are computed as in the proof of Theorem A, with two termination rules: the iteration stops with failure as soon as an offset supertile pose is admissible (6 assignments), or as soon as $|P_i| > 300$ (2178 assignments; all of these have $|P_2| >= 398$ after two steps, whereas closure requires $|P_(i+1)| = |P_i|$). The remaining three assignments close after one step with $|P^*| = 44$; they are the assignment of Figure @fig:sup and its images under conjugation by the two cyclic coordinate permutations, and one checks directly that conjugation by the transposition $(0 2)$ fixes the assignment of Figure @fig:sup. The cap is part of the statement: we do not exclude that a capped iteration stabilises at some value above 300, but such a rule would admit more than six times as many contacts as the certified one, and in all capped cases the growth from $|P_1|$ to $|P_2|$ is by a factor between 3 and 7.]
+#pf[This is again a finite computation (`scan3.py`, `closure_scan3.py`). For each of the $3^7$ assignments the hierarchical language $P_0$ and the coarsening iteration are computed as in the proof of Theorem A, with two termination rules: the iteration stops with failure as soon as an offset supertile pose is admissible (6 assignments), or as soon as $|P_i| > 300$ (2178 assignments; all of these have $|P_2| >= 398$ after two steps, whereas closure requires $|P_(i+1)| = |P_i|$). The remaining three assignments close after one step with $|P^*| = 44$; they are the assignment of @fig:sup and its images under conjugation by the two cyclic coordinate permutations, and one checks directly that conjugation by the transposition $(0 2)$ fixes the assignment of @fig:sup. The cap is part of the statement: we do not exclude that a capped iteration stabilises at some value above 300, but such a rule would admit more than six times as many contacts as the certified one, and in all capped cases the growth from $|P_1|$ to $|P_2|$ is by a factor between 3 and 7.]
 
 The three closed assignments are also singled out by the simplest statistic: the number $|Sigma(P_0)|$ of pairwise admissible supertile poses of the hierarchical language takes the values $44, 62, 99, 103, 113, 114, 119, 158, 186$ over the 2187 assignments and the minimum $44$ is attained exactly by them (`scan3.py`, `closure_scan3.py`). The uniqueness is a structural fact: self-similarity of the rule leaves no freedom in the marking, once the central child is a translate.
 
@@ -171,12 +169,12 @@ All code is dimension-independent; running it on $C_4$ ($16$ children, $64$ pane
   [canonical ($pi_v = "id"$ or a fixed transposition, by parity)], [1], [158 ($|P_0| = 46$)], [$46 arrow 158 arrow 3354 arrow$ offsets],
   [$D_4$-conjugation-invariant], [32], [158], [fails],
   [$chevron.l (0 3), (1 2) chevron.r$-invariant], [768], [158], [fails],
-  [$Z_4$-invariant], [6912], [running at submission], [—],
+  [$Z_4$-invariant], [6912], [158], [fails],
   [suspension of the 3D solution ($pi_v = pi^((3))_(v')$ or $(3 a) pi^((3))_(v')$)], [6], [840], [fails],
   [coordinate descent on $|Sigma(P_0)|$, random starts], [—], [plateau 1566], [fails],
 ))]
 
-Two facts about the failures are worth recording. First, in every case examined the _first_ coarsening step produces only aligned supertile poses; offsets appear only after the closure has grown (Figure @fig:closure). In other words, the pairwise child rules do force supertiles to meet face-to-face, and what fails is that the enlarged rule no longer coincides with the original one—a failure of _self-similarity_ of the marking rather than of local rigidity. Second, the objective $|Sigma(P_0)|$ has very large plateaus (value 1566 for generic assignments, 158 for the canonical-type ones), which defeats local search; in $N = 3$ the same plateau (value 158) contains 693 of the 2187 assignments, while the solution is an isolated minimum.
+Two facts about the failures are worth recording. First, in every case examined the _first_ coarsening step produces only aligned supertile poses; offsets appear only after the closure has grown (@fig:closure). In other words, the pairwise child rules do force supertiles to meet face-to-face, and what fails is that the enlarged rule no longer coincides with the original one—a failure of _self-similarity_ of the marking rather than of local rigidity. Second, the objective $|Sigma(P_0)|$ has very large plateaus (value 1566 for generic assignments, 158 for the canonical-type ones), which defeats local search; in $N = 3$ the same plateau (value 158) contains 693 of the 2187 assignments, while the solution is an isolated minimum.
 
 #thm("Problem 9.1", [self-similar marking of $C_4$])[
 Decide whether there is a homochiral frame assignment $(pi_v)_(v in U_4)$ of the 16 children of $2C_4$, with $pi_0 = "id"$, that is coarsening-closed ((C1)); and, if so, whether (C2) and (C3) hold for it. A positive answer, by Proposition 7.1 and Theorem 11.1, gives a marked strongly aperiodic monotile in $RR^4$ with $|"Aut"| <= 192$.]
@@ -217,6 +215,18 @@ For $N = 3$ and the marked tile of Theorem A, hypotheses (1) and (3) are supplie
   [5], [penteract chair], [31], [32], [160], [open; conditional bound 1920],
   [$N$], [hypercube chair], [$2^N - 1$], [$2^N$], [$N 2^N$], [conditional bound $2^(N-1) N!$],
 ))]
+
+= Future work
+
+1. *Settle Problem 9.1.* The decisive open question is whether a coarsening-closed frame assignment of $C_4$ exists. Two routes look feasible: (a) a conceptual derivation of the marking in the spirit of Goodman-Strauss's corner/socket description @gs2026, which would give a candidate for every $N$ at once and can be tested with `cert6.py` in seconds; (b) a complete search of the $12^15$ homochiral assignments using stronger pruning, e.g. by requiring closure of the restricted rule on each three-dimensional face of the supertile, or by a SAT/SMT encoding of condition (C1). Theorem B suggests that a solution, if it exists, is isolated and highly structured, so symmetry-based enumeration over larger subgroups $Gamma <= S_4$ is worth completing.
+
+2. *Relax the assumptions of the model.* Our certificate assumes lattice registration and translated central child ($pi_0 = "id"$). Dropping the second is a factor-24 larger search; dropping the first requires enumerating off-lattice contacts, as in the polyhedral realisations of @tsiokos @flicker.
+
+3. *From marked tile to polyhedron.* Carry out the key-and-lock construction of Section 10 explicitly for the rules $F^*$ of Theorem A, and prove that the resulting polyhedron forces lattice registration; compare the result with the Chair44 shape.
+
+4. *Smaller rules.* The 135 facet triples of $F^*$ are what the full-frame marking produces; the minimal number of distinct facet labels (and whether the 14 admissible-but-never-occurring poses of Appendix A can be excluded by a local rule) is open.
+
+5. *Other rep-tiles.* The formalism uses nothing specific to the chair beyond a substitution with a lattice-registered patch; applying it to other $N$-dimensional rep-tiles (e.g. the notched cubes of @gs99) may produce further marked monotiles or show that self-similarity of the marking fails there too.
 
 = Conclusion
 

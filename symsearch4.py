@@ -79,10 +79,12 @@ def evaluate(fr):
 
 if __name__ == "__main__":
     gens = eval(sys.argv[1]); tag = sys.argv[2]
+    lo = int(sys.argv[3]) if len(sys.argv) > 3 else 0; hi = int(sys.argv[4]) if len(sys.argv) > 4 else 10**9
     Gam, orbits, opts, total = enumerate_assignments(gens)
     print(f"|Gamma|={len(Gam)} orbits={[len(o) for o in orbits]} options={[len(o) for o in opts]} total={total}", flush=True)
     res = []; t0 = time.time(); best = None
     for n, choice in enumerate(itertools.product(*opts)):
+        if n < lo or n >= hi: continue
         fr = build(orbits, opts, choice, Gam)
         r = evaluate(fr); res.append((r, fr))
         if best is None or r < best: best = r; print(f"  {n}: new best {r} {fr}", flush=True)
