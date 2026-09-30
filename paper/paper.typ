@@ -228,10 +228,7 @@ The frame-marking formalism turns the search for chair matching rules into finit
 
 Relative poses $(g, t)$ of a touching tile with respect to the reference tile (cubes at $2u + 1$, $u in U_3$); $g$ is written by the images of $x, y, z$, e.g. $(+y -z -x)$ maps $(x,y,z) arrow.bar (y, -z, -x)$; "H" marks the 30 poses that occur in hierarchical tilings, "·" the 14 admitted by the rules but never occurring.
 
-#text(8pt)[
-#columns(3)[
-#raw(read("poses44.txt"))
-]]
+#text(7.5pt)[#grid(columns: 3, gutter: 1em, raw(read("poses44_0.txt")), raw(read("poses44_1.txt")), raw(read("poses44_2.txt")))]
 
 #heading(numbering: none)[Appendix B: human inquiry record]
 

@@ -32,7 +32,7 @@ gs98:
   page-range: 181–223
 gs99:
   type: article
-  title: An aperiodic pair of tiles in E^n for all n ≥ 3
+  title: An aperiodic pair of tiles in Eⁿ for all n ≥ 3
   author: Goodman-Strauss, C.
   date: 1999
   parent: {type: periodical, title: European J. Combin.}
@@ -67,7 +67,7 @@ hat:
   parent: {type: periodical, title: Combinatorial Theory}
   volume: 4
   issue: 1
-  serial-number: {arxiv: "2303.10798"}
+  url: https://arxiv.org/abs/2303.10798
 spectre:
   type: article
   title: A chiral aperiodic monotile
@@ -89,19 +89,19 @@ tsiokos:
   title: A strongly aperiodic monotile in three dimensions
   author: Tsiokos, I.
   date: 2026
-  serial-number: {arxiv: "2609.19214"}
+  url: https://arxiv.org/abs/2609.19214
 gs2026:
   type: article
-  title: Notes on a strongly aperiodic monotile in E^3
+  title: Notes on a strongly aperiodic monotile in E³
   author: Goodman-Strauss, C.
   date: 2026
-  serial-number: {arxiv: "2609.24779"}
+  url: https://arxiv.org/abs/2609.24779
 flicker:
   type: article
   title: Matching rules for a three-dimensional strongly aperiodic monotile
   author: Flicker, F.
   date: 2026
-  serial-number: {arxiv: "2609.23783"}
+  url: https://arxiv.org/abs/2609.23783
 golomb:
   type: book
   title: "Polyominoes: Puzzles, Patterns, Problems, and Packings"
