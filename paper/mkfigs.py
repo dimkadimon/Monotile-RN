@@ -80,7 +80,7 @@ g = np.zeros((2,2,2), dtype=int); g[1,1,1] = -1
 allf=[poly for u in zip(*np.where(g==0)) for (ax_,sg),poly in cube_faces(u).items()
       if not (0<=u[ax_]+sg<2) or g[tuple(np.array(u)+np.eye(3,dtype=int)[ax_]*sg)]!=0]
 ax.add_collection3d(Poly3DCollection(allf, facecolors=[cols[0]]*len(allf), edgecolors='k', linewidths=0.5))
-style(ax, 2, [0,1,2]); ax.view_init(elev=25, azim=-50); ax.set_axis_off()
+style(ax, 2, [0,1,2]); ax.view_init(elev=25, azim=40); ax.set_axis_off()
 ax.set_title('(a) the chair $C_3$ (Chair44): 7 unit cubes', fontsize=10)
 ax2 = fig.add_subplot(1, 2, 2)
 r = np.sqrt(3)

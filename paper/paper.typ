@@ -15,7 +15,7 @@
 #align(center)[
   #text(16pt, weight: "bold")[Towards Strongly Aperiodic Monotiles \ in Higher Dimensions]
   #v(0.5em)
-  Dmitry Kamenetsky \ #text(9pt)[dkamenetsky\@gmail.com] \ #text(9pt)[October 1, 2026 — version 15]
+  Dmitry Kamenetsky \ #text(9pt)[dkamenetsky\@gmail.com] \ #text(9pt)[October 1, 2026 — version 16]
 ]
 
 #block(inset: (x: 1.5em))[
@@ -270,5 +270,7 @@ This research was conducted through an iterative human–AI collaboration on Are
 
 - *Prompt 15 (hat and exploded view).* The chair figure reduced to a single opaque chair, with the hat added for comparison; an exploded view of the eight children added.
 
-- *Prompt 16 (this version).* The exploded view, the assembled supertile and the frame table merged into one figure (@fig:sup); $T_0$ displaced in the exploded view so that $T_(000)$ is visible; a rendering artefact at the contact of $T_0$ and $T_(011)$ removed by drawing all faces in a single depth-sorted collection.
+- *Prompt 16 (merged figure).* The exploded view, the assembled supertile and the frame table merged into one figure (@fig:sup); $T_0$ displaced in the exploded view so that $T_(000)$ is visible; a rendering artefact at the contact of $T_0$ and $T_(011)$ removed by drawing all faces in a single depth-sorted collection.
+
+- *Prompt 17 (this version).* The single chair in @fig:chair re-oriented so that the socket faces the reader, matching $T_0$ in @fig:sup; arXiv subject classes suggested.
 
