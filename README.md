@@ -43,3 +43,7 @@ python3 symsearch4.py "[(3,1,2,0),(0,2,1,3)]" G22
 
 Pose convention: cubes of the reference tile are centred at 2u+1 (u in {0,1}^N minus (1,..,1)); a pose (g,t) with g a signed
 permutation (`(perm, signs)`, `apply(g,x)_i = signs[i]*x[perm[i]]`) and t an integer vector places cubes at g(2u+1)+2t.
+
+## License
+
+The code in this repository is released under the [MIT License](LICENSE). The accompanying paper is distributed under CC BY 4.0.
