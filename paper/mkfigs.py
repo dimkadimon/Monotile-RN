@@ -82,26 +82,64 @@ ax.annotate('offset (odd) supertile\nposes appear next', xy=(2, 3354), xytext=(0
 plt.tight_layout(); plt.savefig('fig/closure.png', dpi=200); plt.close()
 print('ok')
 
-# ---- Figure: a single chair C_3 (7 unit cubes)
-fig = plt.figure(figsize=(9, 4))
-for k, (elev, azim, ttl) in enumerate([(25, -50, 'socket side'), (25, 130, 'back side')]):
-    ax = fig.add_subplot(1, 2, k+1, projection='3d')
-    g = np.zeros((2,2,2), dtype=int); g[1,1,1] = -1  # corner cube (1,2]^3 removed
+
+def tile_faces(g, val, shape):
     faces=[]
-    for u in zip(*np.where(g==0)):
+    for u in zip(*np.where(g==val)):
         for (ax_,sg),poly in cube_faces(u).items():
             nb=list(u); nb[ax_]+=sg
-            if not (0<=nb[ax_]<2) or g[tuple(nb)]!=0: faces.append(poly)
-    ax.add_collection3d(Poly3DCollection(faces, facecolors=[cols[0]]*len(faces), edgecolors='k', linewidths=0.8))
-    # faint unit-cube grid lines on the outer faces
-    inner=[]
-    for u in zip(*np.where(g==0)):
-        for (ax_,sg),poly in cube_faces(u).items():
-            nb=list(u); nb[ax_]+=sg
-            inner.append(poly)
-    ax.add_collection3d(Poly3DCollection(inner, facecolors=(0,0,0,0), edgecolors=(0,0,0,0.25), linewidths=0.5))
-    ax.set_xlim(0,2); ax.set_ylim(0,2); ax.set_zlim(0,2); ax.set_box_aspect((1,1,1)); ax.grid(False)
-    for a in (ax.xaxis, ax.yaxis, ax.zaxis): a.set_pane_color((1,1,1,0)); a.set_ticks([0,1,2])
-    ax.set_xlabel('x'); ax.set_ylabel('y'); ax.set_zlabel('z'); ax.view_init(elev=elev, azim=azim)
-    ax.set_title(f'$C_3$: 7 unit cubes, {ttl}', fontsize=10)
+            if not (0<=nb[ax_]<shape) or g[tuple(nb)]!=val: faces.append(poly)
+    return faces
+def style(ax, L, ticks):
+    ax.set_xlim(0,L); ax.set_ylim(0,L); ax.set_zlim(0,L); ax.set_box_aspect((1,1,1)); ax.grid(False)
+    for a in (ax.xaxis, ax.yaxis, ax.zaxis): a.set_pane_color((1,1,1,0)); a.set_ticks(ticks)
+    ax.set_xlabel('x'); ax.set_ylabel('y'); ax.set_zlabel('z')
+
+# ---- Figure: a single chair C_3 and the hat
+fig = plt.figure(figsize=(9, 4))
+ax = fig.add_subplot(1, 2, 1, projection='3d')
+g = np.zeros((2,2,2), dtype=int); g[1,1,1] = -1
+allf=[poly for u in zip(*np.where(g==0)) for (ax_,sg),poly in cube_faces(u).items()
+      if not (0<=u[ax_]+sg<2) or g[tuple(np.array(u)+np.eye(3,dtype=int)[ax_]*sg)]!=0]
+ax.add_collection3d(Poly3DCollection(allf, facecolors=[cols[0]]*len(allf), edgecolors='k', linewidths=0.5))
+style(ax, 2, [0,1,2]); ax.view_init(elev=25, azim=-50); ax.set_axis_off()
+ax.set_title('(a) the chair $C_3$ (Chair44): 7 unit cubes', fontsize=10)
+ax2 = fig.add_subplot(1, 2, 2)
+r = np.sqrt(3)
+hat = [(0,0),(0,-1),(r/2,-1.5),(r,-2),(1.5*r,-1.5),(r,0),(1.5*r,1.5),(r,2),(r,3),(0,3),(-r/2,1.5),(-r,2),(-1.5*r,1.5),(-r,0)]
+hx=[p[0] for p in hat]+[hat[0][0]]; hy=[p[1] for p in hat]+[hat[0][1]]
+ax2.fill(hx, hy, color=cols[4], ec='k', lw=1.2)
+# kite grid lines (hexagon tiling overlaid with its dual triangles), clipped to the hat
+import matplotlib.patches as mpatches
+from matplotlib.path import Path
+clip = mpatches.PathPatch(Path(list(zip(hx,hy))), transform=ax2.transData, fc='none', ec='none'); ax2.add_patch(clip)
+for cx in np.arange(-6, 7, 1.0):
+    for cy in np.arange(-6, 7, 1.0):
+        pass
+R = 2.0  # hexagon circumradius so that kite short edge = 1 (centre to edge midpoint = R*sqrt3/2 = sqrt3; vertex to midpoint = 1)
+centers=[(i*np.sqrt(3)*R+(j%2)*np.sqrt(3)*R/2 + np.sqrt(3), j*3*R/2) for i in range(-4,5) for j in range(-4,5)]
+for (cx,cy) in centers:
+    V=[(cx+R*np.cos(np.pi/3*k+np.pi/6), cy+R*np.sin(np.pi/3*k+np.pi/6)) for k in range(6)]
+    for k in range(6):
+        a=V[k]; b=V[(k+1)%6]; mid=((a[0]+b[0])/2,(a[1]+b[1])/2)
+        for (p,q) in [(a,b),((cx,cy),mid)]:
+            l,=ax2.plot([p[0],q[0]],[p[1],q[1]],color=(0,0,0,0.35),lw=0.6); l.set_clip_path(clip)
+ax2.set_aspect('equal'); ax2.set_xlim(-3.2,3.2); ax2.set_ylim(-2.6,3.6); ax2.axis('off')
+ax2.set_title('(b) the hat (Smith et al. 2024): 8 kites', fontsize=10)
 plt.tight_layout(); plt.savefig('fig/chair3.png', dpi=200); plt.close()
+
+# ---- Figure: exploded and assembled level-1 supertile
+fig = plt.figure(figsize=(10, 4.6))
+for k, spread in enumerate([3.0, 0.0]):
+    ax = fig.add_subplot(1, 2, k+1, projection='3d')
+    for idx in range(8):
+        faces = tile_faces(grid, idx, 4)
+        cen = np.mean([np.mean(f, axis=0) for f in faces], axis=0)
+        off = (cen - 2.0) / np.linalg.norm(cen - 2.0) * spread if idx else np.zeros(3)
+        faces = [[tuple(np.array(p) + off) for p in f] for f in faces]
+        ax.add_collection3d(Poly3DCollection(faces, facecolors=[cols[idx]]*len(faces), edgecolors='k', linewidths=0.7))
+    L = 4 + spread; style(ax, 4, [0,1,2,3,4]); ax.set_xlim(-spread/2, L - spread/2); ax.set_ylim(-spread/2, L - spread/2); ax.set_zlim(-spread/2, L - spread/2)
+    ax.view_init(elev=25, azim=40)
+    if spread: ax.set_axis_off()
+    ax.set_title(['(a) the eight children pulled apart', '(b) assembled: the supertile $2C_3$'][k], fontsize=10)
+plt.tight_layout(); plt.savefig('fig/exploded3.png', dpi=200); plt.close()
