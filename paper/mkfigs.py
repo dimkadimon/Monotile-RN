@@ -29,7 +29,7 @@ for idx in range(8):
         for (ax_,sg),poly in cube_faces(u).items():
             nb=list(u); nb[ax_]+=sg
             if not (0<=nb[ax_]<4) or grid[tuple(nb)]!=idx: faces.append(poly)
-    col=list(cols[idx]); col[3]=0.45
+    col=list(cols[idx]); col[3]=1.0
     ax.add_collection3d(Poly3DCollection(faces, facecolors=[col]*len(faces), edgecolors=(0,0,0,0.9), linewidths=0.7))
 ax.set_xlim(0,4); ax.set_ylim(0,4); ax.set_zlim(0,4); ax.set_box_aspect((1,1,1)); ax.grid(False)
 for a in (ax.xaxis, ax.yaxis, ax.zaxis): a.set_pane_color((1,1,1,0)); a.set_ticks([0,1,2,3,4])
@@ -81,3 +81,27 @@ ax.annotate('closed: $P_2 = P_1$', xy=(2, 44), xytext=(1.3, 15), fontsize=8, arr
 ax.annotate('offset (odd) supertile\nposes appear next', xy=(2, 3354), xytext=(0.9, 1200), fontsize=8, arrowprops=dict(arrowstyle='->'))
 plt.tight_layout(); plt.savefig('fig/closure.png', dpi=200); plt.close()
 print('ok')
+
+# ---- Figure: a single chair C_3 (7 unit cubes)
+fig = plt.figure(figsize=(9, 4))
+for k, (elev, azim, ttl) in enumerate([(25, -50, 'socket side'), (25, 130, 'back side')]):
+    ax = fig.add_subplot(1, 2, k+1, projection='3d')
+    g = np.zeros((2,2,2), dtype=int); g[1,1,1] = -1  # corner cube (1,2]^3 removed
+    faces=[]
+    for u in zip(*np.where(g==0)):
+        for (ax_,sg),poly in cube_faces(u).items():
+            nb=list(u); nb[ax_]+=sg
+            if not (0<=nb[ax_]<2) or g[tuple(nb)]!=0: faces.append(poly)
+    ax.add_collection3d(Poly3DCollection(faces, facecolors=[cols[0]]*len(faces), edgecolors='k', linewidths=0.8))
+    # faint unit-cube grid lines on the outer faces
+    inner=[]
+    for u in zip(*np.where(g==0)):
+        for (ax_,sg),poly in cube_faces(u).items():
+            nb=list(u); nb[ax_]+=sg
+            inner.append(poly)
+    ax.add_collection3d(Poly3DCollection(inner, facecolors=(0,0,0,0), edgecolors=(0,0,0,0.25), linewidths=0.5))
+    ax.set_xlim(0,2); ax.set_ylim(0,2); ax.set_zlim(0,2); ax.set_box_aspect((1,1,1)); ax.grid(False)
+    for a in (ax.xaxis, ax.yaxis, ax.zaxis): a.set_pane_color((1,1,1,0)); a.set_ticks([0,1,2])
+    ax.set_xlabel('x'); ax.set_ylabel('y'); ax.set_zlabel('z'); ax.view_init(elev=elev, azim=azim)
+    ax.set_title(f'$C_3$: 7 unit cubes, {ttl}', fontsize=10)
+plt.tight_layout(); plt.savefig('fig/chair3.png', dpi=200); plt.close()
