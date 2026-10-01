@@ -153,14 +153,11 @@ The proposition supplies hypothesis (3) of Theorem~\ref{thm:cond}, and (C1) also
 
 \section{The three-dimensional case: an independent certificate}\label{sec:N3}
 
-\begin{figure}[t]\centering\includegraphics[width=0.95\linewidth]{fig/exploded3.png}
-\caption{How the eight children fit together. (a) The children of the level-1 supertile $2C_3$ pulled apart radially from the centre (colours as in Figure~\ref{fig:sup}); the central translate $T_0$ (teal) stays in place and the hidden child $T_{000}$ (blue) is visible behind it. (b) The same eight chairs assembled into $2C_3$.}\label{fig:expl}\end{figure}
-
 \begin{figure}[t]\centering\includegraphics[width=1.0\linewidth]{fig/supertile3.png}
-\caption{Left: the level-1 supertile $2C_3$ and its eight children, viewed from the socket side. The central translate $T_0$ (teal) is visible at the bottom of the socket; the child $T_{000}$ (blue) is at the back and hidden. Right: the certified frame assignment. "Position" is the corner $2v$ of the $2 \times 2 \times 2$ block $B_v = 2v + [0,2]^3$ occupied by the child, i.e. the $(x,y,z)$ coordinates of the lowest corner of its bounding cube in units of unit cubes (for $T_0$ it is the translation vector $(1,1,1)$). Permutations are written as tuples $\pi = (\pi(0), \pi(1), \pi(2))$ acting on $0$-indexed coordinates; the sign flips are $D_{s(v)}$. All eight child maps are proper rotations (homochiral).}\label{fig:sup}\end{figure}
+\caption{The level-1 supertile $2C_3$ and its certified frame assignment. (a) The eight children pulled apart radially from the centre, so that every chair is visible, including the child $T_{000}$ (blue) which is hidden in the assembled supertile. (b) The same eight chairs assembled into $2C_3$, viewed from the socket side; the central translate $T_0$ (teal) is visible at the bottom of the socket. (c) The certified frame assignment. "Position" is the corner $2v$ of the $2 \times 2 \times 2$ block $B_v = 2v + [0,2]^3$ occupied by the child, i.e. the $(x,y,z)$ coordinates of the lowest corner of its bounding cube in units of unit cubes (for $T_0$ it is the translation vector $(1,1,1)$). Permutations are written as tuples $\pi = (\pi(0), \pi(1), \pi(2))$ acting on 0-indexed coordinates; the sign flips are $D_{s(v)}$. All eight child maps are proper rotations (homochiral).}\label{fig:sup}\end{figure}
 
 \begin{theoremA}[verified matching rules for the 3D chair]
-For the homochiral frame assignment of Figure~\ref{fig:sup} (see Figure~\ref{fig:expl} for how the children fit together), conditions (C1)--(C3) hold. Consequently, with $F^*$ the induced facet rules (135 facet-contact triples on the 24 panels of $C_3$), every lattice-registered $F^*$-tiling of $\mathbb{R}^3$ is uniquely hierarchical, every such tiling is strongly aperiodic, and $|\mathrm{Aut}(\mathcal{T})| \le  24$ for each of them.
+For the homochiral frame assignment of Figure~\ref{fig:sup}, conditions (C1)--(C3) hold. Consequently, with $F^*$ the induced facet rules (135 facet-contact triples on the 24 panels of $C_3$), every lattice-registered $F^*$-tiling of $\mathbb{R}^3$ is uniquely hierarchical, every such tiling is strongly aperiodic, and $|\mathrm{Aut}(\mathcal{T})| \le  24$ for each of them.
 \end{theoremA}
 
 
@@ -385,7 +382,9 @@ This research was conducted through an iterative human--AI collaboration on Aren
 
 \item \textbf{Prompt 14 (chair figure).} Figure 1 reverted to opaque tiles; a new figure of a single chair $C_3$ (the Chair44 shape) added in Section~\ref{sec:polytope}; "Thm. Theorem A" corrected in the dimensional table; the code-availability sentence moved to the end of the abstract.
 
-\item \textbf{Prompt 15 (this version).} The chair figure reduced to a single opaque chair, with the hat added for comparison; an exploded view of the eight children added (Figure~\ref{fig:expl}).
+\item \textbf{Prompt 15 (hat and exploded view).} The chair figure reduced to a single opaque chair, with the hat added for comparison; an exploded view of the eight children added.
+
+\item \textbf{Prompt 16 (this version).} The exploded view, the assembled supertile and the frame table merged into one figure (Figure~\ref{fig:sup}); $T_0$ displaced in the exploded view so that $T_{000}$ is visible; a rendering artefact at the contact of $T_0$ and $T_{011}$ removed by drawing all faces in a single depth-sorted collection.
 \end{itemize}
 
 

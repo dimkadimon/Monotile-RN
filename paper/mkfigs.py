@@ -6,9 +6,7 @@ from chairN import *
 fr30 = {'0': (0, 1, 2), (0, 0, 0): (0, 1, 2), (0, 0, 1): (0, 2, 1), (0, 1, 0): (2, 1, 0), (0, 1, 1): (1, 2, 0),
         (1, 0, 0): (1, 0, 2), (1, 0, 1): (0, 1, 2), (1, 1, 0): (2, 0, 1)}
 ch = Chair(3, fr30)
-# ---- Figure: supertile 2C_3 with children (voxels)
-fig = plt.figure(figsize=(11, 5))
-ax = fig.add_subplot(1, 2, 1, projection='3d')
+# ---- data for the supertile figures
 grid = np.zeros((4, 4, 4), dtype=int) - 1
 keys = ['0'] + [v for v in ch.U]
 cols = plt.cm.Set3(np.linspace(0, 1, 12))[[0,4,3,5,6,7,9,11]]
@@ -22,20 +20,6 @@ def cube_faces(u):
     return {(0,-1):[P(0,0,0),P(0,1,0),P(0,1,1),P(0,0,1)], (0,1):[P(1,0,0),P(1,1,0),P(1,1,1),P(1,0,1)],
             (1,-1):[P(0,0,0),P(1,0,0),P(1,0,1),P(0,0,1)], (1,1):[P(0,1,0),P(1,1,0),P(1,1,1),P(0,1,1)],
             (2,-1):[P(0,0,0),P(1,0,0),P(1,1,0),P(0,1,0)], (2,1):[P(0,0,1),P(1,0,1),P(1,1,1),P(0,1,1)]}
-# draw only the outer faces of each tile (internal cube-cube faces of the same tile are omitted)
-for idx in range(8):
-    faces=[]
-    for u in zip(*np.where(grid==idx)):
-        for (ax_,sg),poly in cube_faces(u).items():
-            nb=list(u); nb[ax_]+=sg
-            if not (0<=nb[ax_]<4) or grid[tuple(nb)]!=idx: faces.append(poly)
-    col=list(cols[idx]); col[3]=1.0
-    ax.add_collection3d(Poly3DCollection(faces, facecolors=[col]*len(faces), edgecolors=(0,0,0,0.9), linewidths=0.7))
-ax.set_xlim(0,4); ax.set_ylim(0,4); ax.set_zlim(0,4); ax.set_box_aspect((1,1,1)); ax.grid(False)
-for a in (ax.xaxis, ax.yaxis, ax.zaxis): a.set_pane_color((1,1,1,0)); a.set_ticks([0,1,2,3,4])
-ax.set_xlabel('x'); ax.set_ylabel('y'); ax.set_zlabel('z'); ax.set_title(r'Level-1 supertile $2C_3$: 8 children')
-ax.view_init(elev=25, azim=40)
-ax2 = fig.add_subplot(1, 2, 2); ax2.axis('off')
 rows = [['child', 'position', 'sign flips $D_s$', r'permutation $\pi_v$', 'rotation $h_v = D_s\pi_v$']]
 desc = {'0': 'identity (translation by (1,1,1))', (0,0,0): 'identity', (1,0,0): '180° about $e_2+e_3$', (0,1,0): '180° about $e_1+e_3$',
         (0,0,1): '180° about $e_1+e_2$', (1,0,1): '180° about $e_2$', (0,1,1): '120° about $(1,1,-1)$', (1,1,0): '120° about $(1,-1,-1)$'}
@@ -44,12 +28,6 @@ for idx, k in enumerate(keys):
     else:
         s = ''.join('-' if x else '+' for x in k)
         rows.append([f'$T_{{{"".join(map(str,k))}}}$', str(tuple(2*x for x in k)), s, str(fr30[k]), desc[k]])
-tab = ax2.table(cellText=rows[1:], colLabels=rows[0], loc='center', cellLoc='center', colWidths=[0.11,0.13,0.14,0.16,0.3])
-tab.auto_set_font_size(False); tab.set_fontsize(8); tab.scale(1.15, 1.5)
-for idx in range(8):
-    tab[(idx+1, 0)].set_facecolor(cols[idx])
-ax2.set_title('Certified frame assignment (frames30)', fontsize=10)
-plt.tight_layout(); plt.savefig('fig/supertile3.png', dpi=200); plt.close()
 
 # ---- Figure: certificate funnel
 fig, ax = plt.subplots(figsize=(10, 3.2)); ax.axis('off')
@@ -128,18 +106,28 @@ ax2.set_aspect('equal'); ax2.set_xlim(-3.2,3.2); ax2.set_ylim(-2.6,3.6); ax2.axi
 ax2.set_title('(b) the hat (Smith et al. 2024): 8 kites', fontsize=10)
 plt.tight_layout(); plt.savefig('fig/chair3.png', dpi=200); plt.close()
 
-# ---- Figure: exploded and assembled level-1 supertile
-fig = plt.figure(figsize=(10, 4.6))
-for k, spread in enumerate([3.0, 0.0]):
-    ax = fig.add_subplot(1, 2, k+1, projection='3d')
+# ---- Figure: exploded view, assembled supertile, and frame table (combined)
+fig = plt.figure(figsize=(11, 8.2))
+gs = fig.add_gridspec(2, 2, height_ratios=[1.25, 1.0])
+for k, spread in enumerate([3.4, 0.0]):
+    ax = fig.add_subplot(gs[0, k], projection='3d')
+    faces_all=[]; fc_all=[]
     for idx in range(8):
         faces = tile_faces(grid, idx, 4)
         cen = np.mean([np.mean(f, axis=0) for f in faces], axis=0)
-        off = (cen - 2.0) / np.linalg.norm(cen - 2.0) * spread if idx else np.zeros(3)
-        faces = [[tuple(np.array(p) + off) for p in f] for f in faces]
-        ax.add_collection3d(Poly3DCollection(faces, facecolors=[cols[idx]]*len(faces), edgecolors='k', linewidths=0.7))
-    L = 4 + spread; style(ax, 4, [0,1,2,3,4]); ax.set_xlim(-spread/2, L - spread/2); ax.set_ylim(-spread/2, L - spread/2); ax.set_zlim(-spread/2, L - spread/2)
+        if idx == 0: off = np.array([-0.64, 0.77, 0.0]) * spread * 0.55   # lift the central translate so T000 becomes visible
+        else: off = (cen - 2.0) / np.linalg.norm(cen - 2.0) * spread
+        faces_all += [[tuple(np.array(p) + off) for p in f] for f in faces]; fc_all += [cols[idx]] * len(faces)
+    ax.add_collection3d(Poly3DCollection(faces_all, facecolors=fc_all, edgecolors='k', linewidths=0.7))
+    style(ax, 4, [0,1,2,3,4]); lim = (-spread/2, 4 + spread/2)
+    ax.set_xlim(*lim); ax.set_ylim(*lim); ax.set_zlim(-spread/2, 4 + spread)
     ax.view_init(elev=25, azim=40)
     if spread: ax.set_axis_off()
-    ax.set_title(['(a) the eight children pulled apart', '(b) assembled: the supertile $2C_3$'][k], fontsize=10)
-plt.tight_layout(); plt.savefig('fig/exploded3.png', dpi=200); plt.close()
+    ax.set_title(['(a) the eight children pulled apart', '(b) assembled: the level-1 supertile $2C_3$'][k], fontsize=10)
+ax2 = fig.add_subplot(gs[1, :]); ax2.axis('off')
+tab = ax2.table(cellText=rows[1:], colLabels=rows[0], loc='center', cellLoc='center', colWidths=[0.08,0.1,0.11,0.13,0.26])
+tab.auto_set_font_size(False); tab.set_fontsize(9); tab.scale(1.15, 1.6)
+for idx in range(8):
+    tab[(idx+1, 0)].set_facecolor(cols[idx])
+ax2.set_title('(c) certified frame assignment (frames30)', fontsize=10)
+plt.tight_layout(); plt.savefig('fig/supertile3.png', dpi=200); plt.close()

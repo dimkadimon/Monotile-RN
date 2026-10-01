@@ -15,7 +15,7 @@
 #align(center)[
   #text(16pt, weight: "bold")[Towards Strongly Aperiodic Monotiles \ in Higher Dimensions]
   #v(0.5em)
-  Dmitry Kamenetsky \ #text(9pt)[dkamenetsky\@gmail.com] \ #text(9pt)[October 1, 2026 — version 14]
+  Dmitry Kamenetsky \ #text(9pt)[dkamenetsky\@gmail.com] \ #text(9pt)[October 1, 2026 — version 15]
 ]
 
 #block(inset: (x: 1.5em))[
@@ -120,12 +120,10 @@ The proposition supplies hypothesis (3) of Theorem 11.1, and (C1) also gives hyp
 
 = The three-dimensional case: an independent certificate <sec:N3>
 
-#figure(image("fig/exploded3.png", width: 95%), caption: [How the eight children fit together. (a) The children of the level-1 supertile $2C_3$ pulled apart radially from the centre (colours as in @fig:sup); the central translate $T_0$ (teal) stays in place and the hidden child $T_(000)$ (blue) is visible behind it. (b) The same eight chairs assembled into $2C_3$.]) <fig:expl>
-
-#figure(image("fig/supertile3.png", width: 100%), caption: [Left: the level-1 supertile $2C_3$ and its eight children, viewed from the socket side. The central translate $T_0$ (teal) is visible at the bottom of the socket; the child $T_(000)$ (blue) is at the back and hidden. Right: the certified frame assignment. "Position" is the corner $2v$ of the $2 times 2 times 2$ block $B_v = 2v + [0,2]^3$ occupied by the child, i.e. the $(x,y,z)$ coordinates of the lowest corner of its bounding cube in units of unit cubes (for $T_0$ it is the translation vector $(1,1,1)$). Permutations are written as tuples $pi = (pi(0), pi(1), pi(2))$ acting on $0$-indexed coordinates; the sign flips are $D_(s(v))$. All eight child maps are proper rotations (homochiral).]) <fig:sup>
+#figure(image("fig/supertile3.png", width: 100%), caption: [The level-1 supertile $2C_3$ and its certified frame assignment. (a) The eight children pulled apart radially from the centre, so that every chair is visible, including the child $T_(000)$ (blue) which is hidden in the assembled supertile. (b) The same eight chairs assembled into $2C_3$, viewed from the socket side; the central translate $T_0$ (teal) is visible at the bottom of the socket. (c) The certified frame assignment. "Position" is the corner $2v$ of the $2 times 2 times 2$ block $B_v = 2v + [0,2]^3$ occupied by the child, i.e. the $(x,y,z)$ coordinates of the lowest corner of its bounding cube in units of unit cubes (for $T_0$ it is the translation vector $(1,1,1)$). Permutations are written as tuples $pi = (pi(0), pi(1), pi(2))$ acting on 0-indexed coordinates; the sign flips are $D_(s(v))$. All eight child maps are proper rotations (homochiral).]) <fig:sup>
 
 #thm("Theorem A", [verified matching rules for the 3D chair])[
-For the homochiral frame assignment of @fig:sup (see @fig:expl for how the children fit together), conditions (C1)–(C3) hold. Consequently, with $F^*$ the induced facet rules (135 facet-contact triples on the 24 panels of $C_3$), every lattice-registered $F^*$-tiling of $RR^3$ is uniquely hierarchical, every such tiling is strongly aperiodic, and $|"Aut"(cal(T))| <= 24$ for each of them.]
+For the homochiral frame assignment of @fig:sup, conditions (C1)–(C3) hold. Consequently, with $F^*$ the induced facet rules (135 facet-contact triples on the 24 panels of $C_3$), every lattice-registered $F^*$-tiling of $RR^3$ is uniquely hierarchical, every such tiling is strongly aperiodic, and $|"Aut"(cal(T))| <= 24$ for each of them.]
 
 #pf[The proof is a finite computation, organised as in Proposition 7.1 (2388 touching poses $arrow$ 44 admissible $arrow$ 33 enclosures $arrow$ 15 live $arrow$ one complete supertile); it is carried out by `cert6.py` in the repository, and every intermediate object is stored in `cert6_N3triv.pkl`.
 
@@ -270,5 +268,7 @@ This research was conducted through an iterative human–AI collaboration on Are
 
 - *Prompt 14 (chair figure).* Figure 1 reverted to opaque tiles; a new figure of a single chair $C_3$ (the Chair44 shape) added in @sec:polytope; "Thm. Theorem A" corrected in the dimensional table; the code-availability sentence moved to the end of the abstract.
 
-- *Prompt 15 (this version).* The chair figure reduced to a single opaque chair, with the hat added for comparison; an exploded view of the eight children added (@fig:expl).
+- *Prompt 15 (hat and exploded view).* The chair figure reduced to a single opaque chair, with the hat added for comparison; an exploded view of the eight children added.
+
+- *Prompt 16 (this version).* The exploded view, the assembled supertile and the frame table merged into one figure (@fig:sup); $T_0$ displaced in the exploded view so that $T_(000)$ is visible; a rendering artefact at the contact of $T_0$ and $T_(011)$ removed by drawing all faces in a single depth-sorted collection.
 
