@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "Monotile-RN: frame-marking certificates for the N-dimensional chair tile"
+authors:
+  - family-names: Kamenetsky
+    given-names: Dmitry
+    email: dkamenetsky@gmail.com
+repository-code: "https://github.com/dimkadimon/Monotile-RN"
+license: MIT
+year: 2026
+preferred-citation:
+  type: article
+  title: "Towards Strongly Aperiodic Monotiles in Higher Dimensions"
+  authors:
+    - family-names: Kamenetsky
+      given-names: Dmitry
+  year: 2026
+  journal: "arXiv preprint"
+  identifiers:
+    - type: other
+      value: "arXiv:2610.00916"
+  doi: 10.48550/arXiv.2610.00916
+  url: "https://arxiv.org/abs/2610.00916"
