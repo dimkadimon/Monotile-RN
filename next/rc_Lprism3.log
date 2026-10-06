@@ -1,0 +1,3 @@
+### Lprism3: 1 dissections, 1 classes; tori [(4, 6, 6), (6, 6, 6), (6, 6, 8), (6, 6, 9), (4, 6, 9), (6, 6, 3)]
+class 0: |P|=16; hierarchy periodic: (0, 0, -3); periodic P-tiling: None; de-substitution: None (48s)
+### Lprism3: classes 1; periodic hierarchy 1; periodic P-tiling found 0; of which provably non-hierarchical 0; neither 1

@@ -1,0 +1,54 @@
+/home/user/research/chairN.py:12: SyntaxWarning: invalid escape sequence '\ '
+  * Level-1 supertile in the local frame: 2C_N = [0,4]^N \ (2,4]^N, children
+free polycubes by size: [1, 1, 2, 7, 23, 112, 607, 3811]
+size 2 cells=[(0, 0, 0), (0, 0, 1)] bbox=(1, 1, 2) dissections=121 classes=25
+-- size 2: 1 rep-8 shapes of 1 (0s)
+size 3 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2)] bbox=(1, 1, 3) dissections=1 classes=1
+size 3 cells=[(0, 0, 0), (0, 0, 1), (0, 1, 0)] bbox=(1, 2, 2) dissections=200+ classes=None
+-- size 3: 2 rep-8 shapes of 2 (0s)
+size 4 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 0, 3)] bbox=(1, 1, 4) dissections=1 classes=1
+size 4 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 1, 0)] bbox=(1, 2, 3) dissections=166 classes=85
+size 4 cells=[(0, 0, 0), (0, 0, 1), (0, 1, 0), (0, 1, 1)] bbox=(1, 2, 2) dissections=165 classes=32
+size 4 cells=[(0, 0, 0), (0, 0, 1), (0, 1, 0), (1, 0, 0)] bbox=(2, 2, 2) dissections=200+ classes=None
+size 4 cells=[(0, 0, 0), (0, 0, 1), (0, 1, 0), (1, 0, 1)] bbox=(2, 2, 2) dissections=200+ classes=None
+-- size 4: 5 rep-8 shapes of 7 (0s)
+size 5 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 0, 3), (0, 0, 4)] bbox=(1, 1, 5) dissections=1 classes=1
+size 5 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 1, 0), (0, 1, 1)] bbox=(1, 2, 3) dissections=82 classes=42
+-- size 5: 2 rep-8 shapes of 23 (0s)
+size 6 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 0, 3), (0, 0, 4), (0, 0, 5)] bbox=(1, 1, 6) dissections=1 classes=1
+size 6 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 0, 3), (0, 1, 0), (0, 1, 1)] bbox=(1, 2, 4) dissections=135 classes=68
+size 6 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 1, 0), (0, 1, 1), (0, 1, 2)] bbox=(1, 2, 3) dissections=153 classes=47
+size 6 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 1, 0), (0, 1, 1), (1, 1, 0)] bbox=(2, 2, 3) dissections=64 classes=64
+size 6 cells=[(0, 0, 0), (0, 0, 1), (0, 1, 0), (0, 1, 1), (1, 0, 0), (1, 0, 1)] bbox=(2, 2, 2) dissections=5 classes=3
+-- size 6: 5 rep-8 shapes of 112 (2s)
+size 7 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 0, 3), (0, 0, 4), (0, 0, 5), (0, 0, 6)] bbox=(1, 1, 7) dissections=1 classes=1
+size 7 cells=[(0, 0, 0), (0, 0, 1), (0, 1, 0), (0, 1, 1), (1, 0, 0), (1, 0, 1), (1, 1, 0)] bbox=(2, 2, 2) dissections=1 classes=1
+-- size 7: 2 rep-8 shapes of 607 (8s)
+size 8 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 0, 3), (0, 0, 4), (0, 0, 5), (0, 0, 6), (0, 0, 7)] bbox=(1, 1, 8) dissections=1 classes=1
+size 8 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 0, 3), (0, 1, 0), (0, 1, 1), (0, 1, 2), (0, 1, 3)] bbox=(1, 2, 4) dissections=200+ classes=None
+size 8 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 0, 3), (0, 1, 0), (0, 1, 1), (0, 1, 2), (1, 0, 3)] bbox=(2, 2, 4) dissections=200+ classes=None
+size 8 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 0, 3), (0, 1, 0), (0, 1, 1), (0, 1, 2), (1, 1, 0)] bbox=(2, 2, 4) dissections=200+ classes=None
+size 8 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 0, 3), (0, 1, 0), (0, 1, 1), (0, 1, 3), (1, 0, 2)] bbox=(2, 2, 4) dissections=200+ classes=None
+size 8 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 0, 3), (0, 1, 0), (0, 1, 1), (0, 1, 3), (1, 1, 1)] bbox=(2, 2, 4) dissections=200+ classes=None
+size 8 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 0, 3), (0, 1, 0), (0, 1, 1), (1, 0, 0), (1, 0, 1)] bbox=(2, 2, 4) dissections=200+ classes=None
+size 8 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 0, 3), (0, 1, 0), (0, 1, 1), (1, 0, 2), (1, 0, 3)] bbox=(2, 2, 4) dissections=200+ classes=None
+size 8 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 0, 3), (0, 1, 0), (0, 1, 1), (1, 1, 0), (1, 1, 1)] bbox=(2, 2, 4) dissections=200+ classes=None
+size 8 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 0, 3), (0, 1, 0), (0, 1, 2), (1, 0, 1), (1, 0, 3)] bbox=(2, 2, 4) dissections=200+ classes=None
+size 8 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 0, 3), (0, 1, 0), (0, 1, 2), (1, 1, 0), (1, 1, 2)] bbox=(2, 2, 4) dissections=200+ classes=None
+size 8 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 0, 3), (0, 1, 0), (0, 1, 3), (1, 0, 1), (1, 0, 2)] bbox=(2, 2, 4) dissections=200+ classes=None
+size 8 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 0, 3), (0, 1, 0), (1, 1, 0), (1, 1, 1), (1, 1, 2)] bbox=(2, 2, 4) dissections=200+ classes=None
+size 8 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 1, 0), (0, 1, 1), (0, 1, 2), (1, 0, 0), (1, 1, 0)] bbox=(2, 2, 3) dissections=200+ classes=None
+size 8 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 1, 0), (0, 1, 1), (1, 0, 0), (1, 0, 2), (1, 1, 0)] bbox=(2, 2, 3) dissections=200+ classes=None
+size 8 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 1, 0), (0, 1, 1), (1, 0, 0), (1, 1, 0), (1, 1, 1)] bbox=(2, 2, 3) dissections=200+ classes=None
+size 8 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 1, 0), (0, 1, 1), (1, 0, 2), (1, 0, 3), (1, 1, 3)] bbox=(2, 2, 4) dissections=200+ classes=None
+size 8 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 1, 0), (0, 1, 2), (0, 1, 3), (1, 0, 1), (1, 1, 3)] bbox=(2, 2, 4) dissections=200+ classes=None
+size 8 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 1, 0), (0, 1, 2), (0, 1, 3), (1, 0, 2), (1, 1, 0)] bbox=(2, 2, 4) dissections=200+ classes=None
+size 8 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 1, 0), (0, 1, 2), (1, 0, 0), (1, 1, 0), (1, 1, 2)] bbox=(2, 2, 3) dissections=200+ classes=None
+size 8 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 1, 0), (0, 1, 2), (1, 0, 2), (1, 0, 3), (1, 1, 0)] bbox=(2, 2, 4) dissections=200+ classes=None
+size 8 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 1, 0), (1, 0, 0), (1, 1, 0), (1, 1, 1), (1, 1, 2)] bbox=(2, 2, 3) dissections=32 classes=10
+size 8 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 1, 0), (1, 0, 1), (1, 0, 2), (1, 0, 3), (1, 1, 3)] bbox=(2, 2, 4) dissections=200+ classes=None
+size 8 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 1, 0), (1, 0, 2), (1, 0, 3), (1, 1, 2), (1, 1, 3)] bbox=(2, 2, 4) dissections=200+ classes=None
+size 8 cells=[(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 1, 0), (1, 0, 2), (1, 1, 0), (1, 1, 2), (1, 1, 3)] bbox=(2, 2, 4) dissections=200+ classes=None
+size 8 cells=[(0, 0, 0), (0, 0, 1), (0, 1, 0), (0, 1, 1), (1, 0, 0), (1, 0, 1), (1, 1, 0), (1, 1, 1)] bbox=(2, 2, 2) dissections=1 classes=1
+size 8 cells=[(0, 0, 0), (0, 0, 1), (0, 1, 0), (0, 1, 3), (1, 0, 1), (1, 0, 2), (1, 1, 2), (1, 1, 3)] bbox=(2, 2, 4) dissections=200+ classes=None
+-- size 8: 27 rep-8 shapes of 3811 (70s)

@@ -31,7 +31,7 @@ name=sys.argv[1]; maxc=int(sys.argv[2])
 cells=normalize_cells(frozenset(SHAPES[name])); G=make_group(3)
 classes,ntot,_=dissection_classes(cells,G)
 vol=len(cells)
-tori=[p for p in [(4,4,4),(4,4,6),(4,4,8),(4,6,6),(4,4,12),(6,6,6),(6,6,8),(4,8,8),(8,8,8),(4,4,7),(4,7,7),(4,4,14),(7,7,7),(4,7,14)] if (p[0]*p[1]*p[2])%vol==0]
+tori=[p for p in [(4,4,4),(4,4,6),(4,4,8),(4,6,6),(4,4,12),(6,6,6),(6,6,8),(4,8,8),(8,8,8),(4,4,7),(4,7,7),(4,4,14),(7,7,7),(4,7,14),(6,6,9),(4,6,9),(6,6,3),(4,4,5),(4,4,10),(4,5,5),(4,4,15)] if (p[0]*p[1]*p[2])%vol==0]
 log(f"### {name}: {ntot} dissections, {len(classes)} classes; tori {tori}")
 rows=[]
 for ci,D in enumerate(classes[:maxc]):

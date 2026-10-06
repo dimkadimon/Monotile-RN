@@ -82,6 +82,10 @@ ones realisable by keys-and-locks on the tile faces without wiring information a
 | hex223 (6) | 64 | 0 | 64 | 64 (all fail at level 2) | no, for every depth |
 | tripod (4) | 52 | 14 | 52 | 44 (the 8 others have periodic hierarchies) | no, for every depth |
 | screw (4) | 40 of 10 440 | 5 | 40 | 39 (the other has a periodic hierarchy) | no (sampled) |
+| L-prism-3 (9) | 1 | 1 (z-period 3) | 0 | – | unique dissection but periodic hierarchy |
+| oct8 (8) | 10 | 4 | 10 | 10 | no |
+| cube10 (10) | 3 | 2 | 2 | 2 | no |
+| plate25 (10) | 11 | 5 | 6 of 6 non-periodic | 6 | no |
 
 * "periodic hierarchy": the fixed-point tiling itself is invariant under a translation (verified on
   level-6 supertiles) — such a dissection cannot give aperiodicity by any rule.  This explains the two

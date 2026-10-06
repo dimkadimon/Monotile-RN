@@ -1,0 +1,36 @@
+class 1: periodic P-tiling on (5, 8, 8): desub (2, False) (11s)
+=== plate25_c1: |R1|=112 (marked, stabilised at level 3); unmarked projection 22
+  level 1->2: |R_2|=22 (prev unmarked 22) self-similar=True (0s)
+  level 2->3: 146 supertile poses, 116 OFFSET -> fail
+=== plate25_c1: offset@2(116) (0s)
+class 1: mcert k=1 status offset@2(116) certified=None
+class 2: periodic P-tiling on (5, 8, 8): desub (2, False) (13s)
+=== plate25_c2: |R1|=150 (marked, stabilised at level 3); unmarked projection 30
+  level 1->2: |R_2|=30 (prev unmarked 30) self-similar=True (0s)
+  level 2->3: 212 supertile poses, 182 OFFSET -> fail
+=== plate25_c2: offset@2(182) (0s)
+class 2: mcert k=1 status offset@2(182) certified=None
+class 5: periodic P-tiling on (5, 8, 8): desub (2, False) (12s)
+=== plate25_c5: |R1|=152 (marked, stabilised at level 3); unmarked projection 30
+  level 1->2: |R_2|=30 (prev unmarked 30) self-similar=True (0s)
+  level 2->3: 212 supertile poses, 182 OFFSET -> fail
+=== plate25_c5: offset@2(182) (0s)
+class 5: mcert k=1 status offset@2(182) certified=None
+class 6: periodic P-tiling on (5, 8, 8): desub (2, False) (11s)
+=== plate25_c6: |R1|=120 (marked, stabilised at level 3); unmarked projection 22
+  level 1->2: |R_2|=22 (prev unmarked 22) self-similar=True (0s)
+  level 2->3: 134 supertile poses, 104 OFFSET -> fail
+=== plate25_c6: offset@2(104) (0s)
+class 6: mcert k=1 status offset@2(104) certified=None
+class 7: periodic P-tiling on (5, 8, 8): desub (2, False) (11s)
+=== plate25_c7: |R1|=112 (marked, stabilised at level 3); unmarked projection 22
+  level 1->2: |R_2|=22 (prev unmarked 22) self-similar=True (0s)
+  level 2->3: 148 supertile poses, 118 OFFSET -> fail
+=== plate25_c7: offset@2(118) (0s)
+class 7: mcert k=1 status offset@2(118) certified=None
+class 9: periodic P-tiling on (5, 8, 8): desub (2, False) (13s)
+=== plate25_c9: |R1|=150 (marked, stabilised at level 3); unmarked projection 30
+  level 1->2: |R_2|=30 (prev unmarked 30) self-similar=True (0s)
+  level 2->3: 212 supertile poses, 182 OFFSET -> fail
+=== plate25_c9: offset@2(182) (0s)
+class 9: mcert k=1 status offset@2(182) certified=None

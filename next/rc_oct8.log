@@ -1,0 +1,12 @@
+### oct8: 32 dissections, 10 classes; tori [(4, 4, 4), (4, 4, 6), (4, 4, 8), (4, 6, 6), (4, 4, 12), (6, 6, 6), (6, 6, 8), (4, 8, 8), (8, 8, 8), (4, 4, 7), (4, 4, 14), (4, 7, 14), (4, 6, 9)]
+class 0: |P|=24; hierarchy periodic: (-2, 0, 0); periodic P-tiling: (4, 4, 4); de-substitution: FAILS at level 2 (7s)
+class 1: |P|=40; hierarchy periodic: None; periodic P-tiling: (4, 4, 4); de-substitution: FAILS at level 2 (3s)
+class 2: |P|=24; hierarchy periodic: (-2, 0, 0); periodic P-tiling: (4, 4, 4); de-substitution: FAILS at level 2 (7s)
+class 3: |P|=40; hierarchy periodic: None; periodic P-tiling: (4, 4, 4); de-substitution: FAILS at level 2 (3s)
+class 4: |P|=26; hierarchy periodic: None; periodic P-tiling: (4, 4, 4); de-substitution: FAILS at level 2 (3s)
+class 5: |P|=26; hierarchy periodic: None; periodic P-tiling: (4, 4, 4); de-substitution: FAILS at level 2 (3s)
+class 6: |P|=40; hierarchy periodic: None; periodic P-tiling: (4, 4, 4); de-substitution: FAILS at level 2 (4s)
+class 7: |P|=24; hierarchy periodic: (-2, 0, 0); periodic P-tiling: (4, 4, 4); de-substitution: FAILS at level 2 (7s)
+class 8: |P|=40; hierarchy periodic: None; periodic P-tiling: (4, 4, 4); de-substitution: FAILS at level 2 (4s)
+class 9: |P|=24; hierarchy periodic: (-2, 0, 0); periodic P-tiling: (4, 4, 4); de-substitution: FAILS at level 2 (7s)
+### oct8: classes 10; periodic hierarchy 4; periodic P-tiling found 10; of which provably non-hierarchical 10; neither 0

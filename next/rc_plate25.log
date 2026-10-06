@@ -1,0 +1,13 @@
+### plate25: 25 dissections, 11 classes; tori [(4, 4, 5), (4, 4, 10), (4, 5, 5), (4, 4, 15)]
+class 0: |P|=6; hierarchy periodic: (-1, 0, 0); periodic P-tiling: None; de-substitution: None (4s)
+class 1: |P|=22; hierarchy periodic: None; periodic P-tiling: None; de-substitution: None (1s)
+class 2: |P|=30; hierarchy periodic: None; periodic P-tiling: None; de-substitution: None (1s)
+class 3: |P|=14; hierarchy periodic: (-2, 0, 0); periodic P-tiling: None; de-substitution: None (4s)
+class 4: |P|=14; hierarchy periodic: (0, 0, -5); periodic P-tiling: None; de-substitution: None (4s)
+class 5: |P|=30; hierarchy periodic: None; periodic P-tiling: None; de-substitution: None (1s)
+class 6: |P|=22; hierarchy periodic: None; periodic P-tiling: None; de-substitution: None (1s)
+class 7: |P|=22; hierarchy periodic: None; periodic P-tiling: None; de-substitution: None (1s)
+class 8: |P|=18; hierarchy periodic: (0, 0, -5); periodic P-tiling: None; de-substitution: None (4s)
+class 9: |P|=30; hierarchy periodic: None; periodic P-tiling: None; de-substitution: None (1s)
+class 10: |P|=6; hierarchy periodic: (-2, 0, 0); periodic P-tiling: None; de-substitution: None (4s)
+### plate25: classes 11; periodic hierarchy 5; periodic P-tiling found 0; of which provably non-hierarchical 0; neither 11

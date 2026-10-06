@@ -1,0 +1,5 @@
+### cube10: 4 dissections, 3 classes; tori [(4, 4, 5), (4, 4, 10), (4, 5, 5), (4, 4, 15)]
+class 0: |P|=39; hierarchy periodic: (0, -2, 0); periodic P-tiling: None; de-substitution: None (26s)
+class 1: |P|=173; hierarchy periodic: None; periodic P-tiling: (4, 4, 10); de-substitution: FAILS at level 2 (24s)
+class 2: |P|=49; hierarchy periodic: (0, -2, 0); periodic P-tiling: (4, 4, 10); de-substitution: FAILS at level 3 (25s)
+### cube10: classes 3; periodic hierarchy 2; periodic P-tiling found 2; of which provably non-hierarchical 2; neither 1
