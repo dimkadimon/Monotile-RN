@@ -113,3 +113,15 @@ a rule that grows without stabilising (no self-similarity), so they are not cand
 
 Files: `mcert.py`, `mcensus.py`, logs `mcensus_hex222.log`, `mcensus_tripod.log`,
 `mcensus_tripod2.log`, `mcensus_screw.log`, pickles `mcensus_*_*.pkl`.
+
+---
+
+## Addendum (session 3b): rigidity theorem — see `RIGIDITY.md`
+
+Inflation lemma (depth-k admissible ⇒ inflated tiling is depth-(k+1) admissible) ⇒ **Theorem A**: a
+periodic non-hierarchical tiling admitted by the frame rule L_0 yields periodic non-hierarchical
+tilings for every ancestry depth k.  SAT census (`persat.py`, `rigidity_census.py`): such periodic
+tilings exist for every dissection class of hex222 (3), hex223 (64), tripod (52), screw (40 sampled)
+— and for none of the chair's tori.  14 tripod, 5 screw and 1 hex222 classes have *periodic
+hierarchies* (useless for any rule; explains the two "open" tripod classes).  Mixed substitution
+(D' at one level) is never admissible — the counterexamples are sliding arrangements of honest supertiles.

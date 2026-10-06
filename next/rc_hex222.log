@@ -1,0 +1,5 @@
+### hex222: 5 dissections, 3 classes; tori [(4, 4, 6), (4, 6, 6), (4, 4, 12), (6, 6, 6), (6, 6, 8)]
+class 0: |P|=16; hierarchy periodic: (0, 0, -2); periodic P-tiling: (4, 4, 12); de-substitution: FAILS at level 3 (38s)
+class 1: |P|=209; hierarchy periodic: None; periodic P-tiling: (4, 4, 12); de-substitution: FAILS at level 3 (397s)
+class 2: |P|=112; hierarchy periodic: None; periodic P-tiling: (4, 4, 12); de-substitution: FAILS at level 3 (64s)
+### hex222: classes 3; periodic hierarchy 1; periodic P-tiling found 3; of which provably non-hierarchical 3; neither 0
