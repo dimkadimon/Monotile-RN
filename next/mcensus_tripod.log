@@ -1,0 +1,35 @@
+### tripod: 256 dissections -> 52 classes (frame variants irrelevant under full index marking)
+=== tripod_c0: |R1|=108 (marked, stabilised at level 3); unmarked projection 18
+  level 1->2: |R_2|=18 (prev unmarked 18) self-similar=True (0s)
+  level 2->3: |R_3|=118 (prev unmarked 18) self-similar=False (0s)
+  level 3->4: 839 supertile poses, 721 OFFSET -> fail
+=== tripod_c0: offset@3(721) (3s)
+=== tripod_c1: |R1|=168 (marked, stabilised at level 4); unmarked projection 34
+  level 1->2: |R_2|=34 (prev unmarked 34) self-similar=True (0s)
+  level 2->3: |R_3|=238 (prev unmarked 34) self-similar=False (0s)
+  level 3->4: 1687 supertile poses, 1449 OFFSET -> fail
+=== tripod_c1: offset@3(1449) (6s)
+=== tripod_c2: |R1|=92 (marked, stabilised at level 3); unmarked projection 16
+  level 1->2: |R_2|=16 (prev unmarked 16) self-similar=True (0s)
+  level 2->3: |R_3|=118 (prev unmarked 16) self-similar=False (0s)
+  level 3->4: 721 supertile poses, 483 OFFSET -> fail
+=== tripod_c2: offset@3(483) (3s)
+=== tripod_c3: |R1|=72 (marked, stabilised at level 2); unmarked projection 9
+  level 1->2: |R_2|=9 (prev unmarked 9) self-similar=True (0s)
+  level 2->3: |R_3|=58 (prev unmarked 9) self-similar=False (0s)
+  level 3->4: 359 supertile poses, 241 OFFSET -> fail
+=== tripod_c3: offset@3(241) (1s)
+=== tripod_c4: |R1|=80 (marked, stabilised at level 3); unmarked projection 13
+  level 1->2: |R_2|=13 (prev unmarked 13) self-similar=True (0s)
+  level 2->3: |R_3|=90 (prev unmarked 13) self-similar=False (0s)
+  level 3->4: 525 supertile poses, 343 OFFSET -> fail
+=== tripod_c4: offset@3(343) (2s)
+=== tripod_c5: |R1|=168 (marked, stabilised at level 4); unmarked projection 34
+  level 1->2: |R_2|=34 (prev unmarked 34) self-similar=True (0s)
+  level 2->3: |R_3|=238 (prev unmarked 34) self-similar=False (0s)
+  level 3->4: 1687 supertile poses, 1449 OFFSET -> fail
+=== tripod_c5: offset@3(1449) (6s)
+=== tripod_c6: |R1|=56 (marked, stabilised at level 2); unmarked projection 7
+  level 1->2: |R_2|=7 (prev unmarked 7) self-similar=True (0s)
+  level 2->3: |R_3|=58 (prev unmarked 7) self-similar=False (0s)
+  level 3->4: |R_4|=238 (prev unmarked 58) self-similar=False (1s)

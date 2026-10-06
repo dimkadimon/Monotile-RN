@@ -1,0 +1,232 @@
+### tripod: 256 dissections -> 52 classes (frame variants irrelevant under full index marking)
+=== tripod_c6: |R1|=56 (marked, stabilised at level 2); unmarked projection 7
+  level 1->2: |R_2|=7 (prev unmarked 7) self-similar=True (0s)
+  level 2->3: |R_3|=58 (prev unmarked 7) self-similar=False (0s)
+  level 3->4: |R_4|=238 (prev unmarked 58) self-similar=False (1s)
+=== tripod_c6: open (3s)
+=== tripod_c7: |R1|=92 (marked, stabilised at level 3); unmarked projection 16
+  level 1->2: |R_2|=16 (prev unmarked 16) self-similar=True (0s)
+  level 2->3: |R_3|=118 (prev unmarked 16) self-similar=False (0s)
+  level 3->4: 721 supertile poses, 483 OFFSET -> fail
+=== tripod_c7: offset@3(483) (3s)
+=== tripod_c8: |R1|=108 (marked, stabilised at level 3); unmarked projection 18
+  level 1->2: |R_2|=18 (prev unmarked 18) self-similar=True (0s)
+  level 2->3: |R_3|=118 (prev unmarked 18) self-similar=False (0s)
+  level 3->4: 839 supertile poses, 721 OFFSET -> fail
+=== tripod_c8: offset@3(721) (3s)
+=== tripod_c9: |R1|=80 (marked, stabilised at level 2); unmarked projection 10
+  level 1->2: |R_2|=10 (prev unmarked 10) self-similar=True (0s)
+  level 2->3: |R_3|=58 (prev unmarked 10) self-similar=False (0s)
+  level 3->4: 415 supertile poses, 357 OFFSET -> fail
+=== tripod_c9: offset@3(357) (2s)
+=== tripod_c10: |R1|=108 (marked, stabilised at level 3); unmarked projection 18
+  level 1->2: |R_2|=18 (prev unmarked 18) self-similar=True (0s)
+  level 2->3: |R_3|=118 (prev unmarked 18) self-similar=False (0s)
+  level 3->4: 839 supertile poses, 721 OFFSET -> fail
+=== tripod_c10: offset@3(721) (3s)
+=== tripod_c11: |R1|=108 (marked, stabilised at level 3); unmarked projection 18
+  level 1->2: |R_2|=18 (prev unmarked 18) self-similar=True (0s)
+  level 2->3: |R_3|=118 (prev unmarked 18) self-similar=False (0s)
+  level 3->4: 839 supertile poses, 721 OFFSET -> fail
+=== tripod_c11: offset@3(721) (3s)
+=== tripod_c12: |R1|=108 (marked, stabilised at level 3); unmarked projection 18
+  level 1->2: |R_2|=18 (prev unmarked 18) self-similar=True (0s)
+  level 2->3: |R_3|=118 (prev unmarked 18) self-similar=False (0s)
+  level 3->4: 839 supertile poses, 721 OFFSET -> fail
+=== tripod_c12: offset@3(721) (3s)
+=== tripod_c13: |R1|=92 (marked, stabilised at level 3); unmarked projection 16
+  level 1->2: |R_2|=16 (prev unmarked 16) self-similar=True (0s)
+  level 2->3: |R_3|=118 (prev unmarked 16) self-similar=False (0s)
+  level 3->4: 721 supertile poses, 483 OFFSET -> fail
+=== tripod_c13: offset@3(483) (3s)
+=== tripod_c14: |R1|=72 (marked, stabilised at level 2); unmarked projection 9
+  level 1->2: |R_2|=9 (prev unmarked 9) self-similar=True (0s)
+  level 2->3: |R_3|=58 (prev unmarked 9) self-similar=False (0s)
+  level 3->4: 359 supertile poses, 241 OFFSET -> fail
+=== tripod_c14: offset@3(241) (1s)
+=== tripod_c15: |R1|=168 (marked, stabilised at level 4); unmarked projection 34
+  level 1->2: |R_2|=34 (prev unmarked 34) self-similar=True (0s)
+  level 2->3: |R_3|=238 (prev unmarked 34) self-similar=False (0s)
+  level 3->4: 1687 supertile poses, 1449 OFFSET -> fail
+=== tripod_c15: offset@3(1449) (7s)
+=== tripod_c16: |R1|=92 (marked, stabilised at level 3); unmarked projection 16
+  level 1->2: |R_2|=16 (prev unmarked 16) self-similar=True (0s)
+  level 2->3: |R_3|=118 (prev unmarked 16) self-similar=False (0s)
+  level 3->4: 721 supertile poses, 483 OFFSET -> fail
+=== tripod_c16: offset@3(483) (3s)
+=== tripod_c17: |R1|=168 (marked, stabilised at level 4); unmarked projection 34
+  level 1->2: |R_2|=34 (prev unmarked 34) self-similar=True (0s)
+  level 2->3: |R_3|=238 (prev unmarked 34) self-similar=False (0s)
+  level 3->4: 1687 supertile poses, 1449 OFFSET -> fail
+=== tripod_c17: offset@3(1449) (6s)
+=== tripod_c18: |R1|=104 (marked, stabilised at level 3); unmarked projection 16
+  level 1->2: |R_2|=16 (prev unmarked 16) self-similar=True (0s)
+  level 2->3: |R_3|=92 (prev unmarked 16) self-similar=False (0s)
+  level 3->4: 654 supertile poses, 562 OFFSET -> fail
+=== tripod_c18: offset@3(562) (3s)
+=== tripod_c19: |R1|=108 (marked, stabilised at level 3); unmarked projection 18
+  level 1->2: |R_2|=18 (prev unmarked 18) self-similar=True (0s)
+  level 2->3: |R_3|=118 (prev unmarked 18) self-similar=False (0s)
+  level 3->4: 839 supertile poses, 721 OFFSET -> fail
+=== tripod_c19: offset@3(721) (3s)
+=== tripod_c20: |R1|=104 (marked, stabilised at level 3); unmarked projection 16
+  level 1->2: |R_2|=16 (prev unmarked 16) self-similar=True (0s)
+  level 2->3: |R_3|=92 (prev unmarked 16) self-similar=False (0s)
+  level 3->4: 654 supertile poses, 562 OFFSET -> fail
+=== tripod_c20: offset@3(562) (3s)
+=== tripod_c21: |R1|=168 (marked, stabilised at level 3); unmarked projection 34
+  level 1->2: |R_2|=34 (prev unmarked 34) self-similar=True (0s)
+  level 2->3: |R_3|=238 (prev unmarked 34) self-similar=False (0s)
+  level 3->4: 1687 supertile poses, 1449 OFFSET -> fail
+=== tripod_c21: offset@3(1449) (6s)
+=== tripod_c22: |R1|=168 (marked, stabilised at level 3); unmarked projection 34
+  level 1->2: |R_2|=34 (prev unmarked 34) self-similar=True (0s)
+  level 2->3: |R_3|=238 (prev unmarked 34) self-similar=False (0s)
+  level 3->4: 1687 supertile poses, 1449 OFFSET -> fail
+=== tripod_c22: offset@3(1449) (6s)
+=== tripod_c23: |R1|=168 (marked, stabilised at level 4); unmarked projection 34
+  level 1->2: |R_2|=34 (prev unmarked 34) self-similar=True (0s)
+  level 2->3: |R_3|=238 (prev unmarked 34) self-similar=False (0s)
+  level 3->4: 1687 supertile poses, 1449 OFFSET -> fail
+=== tripod_c23: offset@3(1449) (7s)
+=== tripod_c24: |R1|=168 (marked, stabilised at level 4); unmarked projection 34
+  level 1->2: |R_2|=34 (prev unmarked 34) self-similar=True (0s)
+  level 2->3: |R_3|=238 (prev unmarked 34) self-similar=False (0s)
+  level 3->4: 1687 supertile poses, 1449 OFFSET -> fail
+=== tripod_c24: offset@3(1449) (6s)
+=== tripod_c25: |R1|=152 (marked, stabilised at level 4); unmarked projection 28
+  level 1->2: |R_2|=28 (prev unmarked 28) self-similar=True (0s)
+  level 2->3: |R_3|=157 (prev unmarked 28) self-similar=False (0s)
+  level 3->4: 1093 supertile poses, 936 OFFSET -> fail
+=== tripod_c25: offset@3(936) (6s)
+=== tripod_c26: |R1|=92 (marked, stabilised at level 3); unmarked projection 16
+  level 1->2: |R_2|=16 (prev unmarked 16) self-similar=True (0s)
+  level 2->3: |R_3|=118 (prev unmarked 16) self-similar=False (0s)
+  level 3->4: 721 supertile poses, 483 OFFSET -> fail
+=== tripod_c26: offset@3(483) (3s)
+=== tripod_c27: |R1|=168 (marked, stabilised at level 4); unmarked projection 34
+  level 1->2: |R_2|=34 (prev unmarked 34) self-similar=True (0s)
+  level 2->3: |R_3|=238 (prev unmarked 34) self-similar=False (0s)
+  level 3->4: 1687 supertile poses, 1449 OFFSET -> fail
+=== tripod_c27: offset@3(1449) (7s)
+=== tripod_c28: |R1|=80 (marked, stabilised at level 3); unmarked projection 13
+  level 1->2: |R_2|=13 (prev unmarked 13) self-similar=True (0s)
+  level 2->3: |R_3|=90 (prev unmarked 13) self-similar=False (0s)
+  level 3->4: 525 supertile poses, 343 OFFSET -> fail
+=== tripod_c28: offset@3(343) (3s)
+=== tripod_c29: |R1|=168 (marked, stabilised at level 4); unmarked projection 34
+  level 1->2: |R_2|=34 (prev unmarked 34) self-similar=True (0s)
+  level 2->3: |R_3|=238 (prev unmarked 34) self-similar=False (0s)
+  level 3->4: 1687 supertile poses, 1449 OFFSET -> fail
+=== tripod_c29: offset@3(1449) (6s)
+=== tripod_c30: |R1|=168 (marked, stabilised at level 3); unmarked projection 34
+  level 1->2: |R_2|=34 (prev unmarked 34) self-similar=True (0s)
+  level 2->3: |R_3|=238 (prev unmarked 34) self-similar=False (0s)
+  level 3->4: 1687 supertile poses, 1449 OFFSET -> fail
+=== tripod_c30: offset@3(1449) (6s)
+=== tripod_c31: |R1|=92 (marked, stabilised at level 3); unmarked projection 16
+  level 1->2: |R_2|=16 (prev unmarked 16) self-similar=True (0s)
+  level 2->3: |R_3|=118 (prev unmarked 16) self-similar=False (0s)
+  level 3->4: 721 supertile poses, 483 OFFSET -> fail
+=== tripod_c31: offset@3(483) (3s)
+=== tripod_c32: |R1|=152 (marked, stabilised at level 4); unmarked projection 28
+  level 1->2: |R_2|=28 (prev unmarked 28) self-similar=True (0s)
+  level 2->3: |R_3|=157 (prev unmarked 28) self-similar=False (0s)
+  level 3->4: 1093 supertile poses, 936 OFFSET -> fail
+=== tripod_c32: offset@3(936) (6s)
+=== tripod_c33: |R1|=168 (marked, stabilised at level 4); unmarked projection 34
+  level 1->2: |R_2|=34 (prev unmarked 34) self-similar=True (0s)
+  level 2->3: |R_3|=238 (prev unmarked 34) self-similar=False (0s)
+  level 3->4: 1687 supertile poses, 1449 OFFSET -> fail
+=== tripod_c33: offset@3(1449) (6s)
+=== tripod_c34: |R1|=104 (marked, stabilised at level 3); unmarked projection 16
+  level 1->2: |R_2|=16 (prev unmarked 16) self-similar=True (0s)
+  level 2->3: |R_3|=92 (prev unmarked 16) self-similar=False (0s)
+  level 3->4: 654 supertile poses, 562 OFFSET -> fail
+=== tripod_c34: offset@3(562) (3s)
+=== tripod_c35: |R1|=108 (marked, stabilised at level 3); unmarked projection 18
+  level 1->2: |R_2|=18 (prev unmarked 18) self-similar=True (0s)
+  level 2->3: |R_3|=118 (prev unmarked 18) self-similar=False (0s)
+  level 3->4: 839 supertile poses, 721 OFFSET -> fail
+=== tripod_c35: offset@3(721) (3s)
+=== tripod_c36: |R1|=108 (marked, stabilised at level 3); unmarked projection 18
+  level 1->2: |R_2|=18 (prev unmarked 18) self-similar=True (0s)
+  level 2->3: |R_3|=118 (prev unmarked 18) self-similar=False (0s)
+  level 3->4: 839 supertile poses, 721 OFFSET -> fail
+=== tripod_c36: offset@3(721) (3s)
+=== tripod_c37: |R1|=72 (marked, stabilised at level 2); unmarked projection 9
+  level 1->2: |R_2|=9 (prev unmarked 9) self-similar=True (0s)
+  level 2->3: |R_3|=58 (prev unmarked 9) self-similar=False (0s)
+  level 3->4: 359 supertile poses, 241 OFFSET -> fail
+=== tripod_c37: offset@3(241) (1s)
+=== tripod_c38: |R1|=92 (marked, stabilised at level 3); unmarked projection 16
+  level 1->2: |R_2|=16 (prev unmarked 16) self-similar=True (0s)
+  level 2->3: |R_3|=118 (prev unmarked 16) self-similar=False (0s)
+  level 3->4: 721 supertile poses, 483 OFFSET -> fail
+=== tripod_c38: offset@3(483) (3s)
+=== tripod_c39: |R1|=168 (marked, stabilised at level 4); unmarked projection 34
+  level 1->2: |R_2|=34 (prev unmarked 34) self-similar=True (0s)
+  level 2->3: |R_3|=238 (prev unmarked 34) self-similar=False (0s)
+  level 3->4: 1687 supertile poses, 1449 OFFSET -> fail
+=== tripod_c39: offset@3(1449) (7s)
+=== tripod_c40: |R1|=92 (marked, stabilised at level 3); unmarked projection 16
+  level 1->2: |R_2|=16 (prev unmarked 16) self-similar=True (0s)
+  level 2->3: |R_3|=118 (prev unmarked 16) self-similar=False (0s)
+  level 3->4: 721 supertile poses, 483 OFFSET -> fail
+=== tripod_c40: offset@3(483) (3s)
+=== tripod_c41: |R1|=80 (marked, stabilised at level 3); unmarked projection 13
+  level 1->2: |R_2|=13 (prev unmarked 13) self-similar=True (0s)
+  level 2->3: |R_3|=90 (prev unmarked 13) self-similar=False (0s)
+  level 3->4: 525 supertile poses, 343 OFFSET -> fail
+=== tripod_c41: offset@3(343) (3s)
+=== tripod_c42: |R1|=168 (marked, stabilised at level 4); unmarked projection 34
+  level 1->2: |R_2|=34 (prev unmarked 34) self-similar=True (0s)
+  level 2->3: |R_3|=238 (prev unmarked 34) self-similar=False (0s)
+  level 3->4: 1687 supertile poses, 1449 OFFSET -> fail
+=== tripod_c42: offset@3(1449) (6s)
+=== tripod_c43: |R1|=168 (marked, stabilised at level 4); unmarked projection 34
+  level 1->2: |R_2|=34 (prev unmarked 34) self-similar=True (0s)
+  level 2->3: |R_3|=238 (prev unmarked 34) self-similar=False (0s)
+  level 3->4: 1687 supertile poses, 1449 OFFSET -> fail
+=== tripod_c43: offset@3(1449) (6s)
+=== tripod_c44: |R1|=168 (marked, stabilised at level 3); unmarked projection 34
+  level 1->2: |R_2|=34 (prev unmarked 34) self-similar=True (0s)
+  level 2->3: |R_3|=238 (prev unmarked 34) self-similar=False (0s)
+  level 3->4: 1687 supertile poses, 1449 OFFSET -> fail
+=== tripod_c44: offset@3(1449) (6s)
+=== tripod_c45: |R1|=92 (marked, stabilised at level 3); unmarked projection 16
+  level 1->2: |R_2|=16 (prev unmarked 16) self-similar=True (0s)
+  level 2->3: |R_3|=118 (prev unmarked 16) self-similar=False (0s)
+  level 3->4: 721 supertile poses, 483 OFFSET -> fail
+=== tripod_c45: offset@3(483) (3s)
+=== tripod_c46: |R1|=108 (marked, stabilised at level 3); unmarked projection 18
+  level 1->2: |R_2|=18 (prev unmarked 18) self-similar=True (0s)
+  level 2->3: |R_3|=118 (prev unmarked 18) self-similar=False (0s)
+  level 3->4: 839 supertile poses, 721 OFFSET -> fail
+=== tripod_c46: offset@3(721) (3s)
+=== tripod_c47: |R1|=72 (marked, stabilised at level 2); unmarked projection 9
+  level 1->2: |R_2|=9 (prev unmarked 9) self-similar=True (0s)
+  level 2->3: |R_3|=58 (prev unmarked 9) self-similar=False (0s)
+  level 3->4: 359 supertile poses, 241 OFFSET -> fail
+=== tripod_c47: offset@3(241) (1s)
+=== tripod_c48: |R1|=56 (marked, stabilised at level 2); unmarked projection 7
+  level 1->2: |R_2|=7 (prev unmarked 7) self-similar=True (0s)
+  level 2->3: |R_3|=58 (prev unmarked 7) self-similar=False (0s)
+  level 3->4: |R_4|=238 (prev unmarked 58) self-similar=False (1s)
+=== tripod_c48: open (3s)
+=== tripod_c49: |R1|=92 (marked, stabilised at level 3); unmarked projection 16
+  level 1->2: |R_2|=16 (prev unmarked 16) self-similar=True (0s)
+  level 2->3: |R_3|=118 (prev unmarked 16) self-similar=False (0s)
+  level 3->4: 721 supertile poses, 483 OFFSET -> fail
+=== tripod_c49: offset@3(483) (3s)
+=== tripod_c50: |R1|=80 (marked, stabilised at level 2); unmarked projection 10
+  level 1->2: |R_2|=10 (prev unmarked 10) self-similar=True (0s)
+  level 2->3: |R_3|=58 (prev unmarked 10) self-similar=False (0s)
+  level 3->4: 415 supertile poses, 357 OFFSET -> fail
+=== tripod_c50: offset@3(357) (1s)
+=== tripod_c51: |R1|=108 (marked, stabilised at level 3); unmarked projection 18
+  level 1->2: |R_2|=18 (prev unmarked 18) self-similar=True (0s)
+  level 2->3: |R_3|=118 (prev unmarked 18) self-similar=False (0s)
+  level 3->4: 839 supertile poses, 721 OFFSET -> fail
+=== tripod_c51: offset@3(721) (3s)
+### tripod summary: Counter({'offset@3': 44, 'open': 2})

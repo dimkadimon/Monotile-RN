@@ -1,0 +1,289 @@
+### screw: 20736 dissections -> 10440 classes (frame variants irrelevant under full index marking)
+=== screw_c0: |R1|=112 (marked, stabilised at level 3); unmarked projection 19
+  level 1->2: |R_2|=19 (prev unmarked 19) self-similar=True (0s)
+  level 2->3: |R_3|=129 (prev unmarked 19) self-similar=False (0s)
+  level 3->4: 864 supertile poses, 735 OFFSET -> fail
+=== screw_c0: offset@3(735) (3s)
+=== screw_c1: |R1|=96 (marked, stabilised at level 3); unmarked projection 17
+  level 1->2: |R_2|=17 (prev unmarked 17) self-similar=True (0s)
+  level 2->3: |R_3|=131 (prev unmarked 17) self-similar=False (0s)
+  level 3->4: 922 supertile poses, 661 OFFSET -> fail
+=== screw_c1: offset@3(661) (3s)
+=== screw_c2: |R1|=172 (marked, stabilised at level 6); unmarked projection 35
+  level 1->2: |R_2|=35 (prev unmarked 35) self-similar=True (0s)
+  level 2->3: |R_3|=261 (prev unmarked 35) self-similar=False (0s)
+  level 3->4: 1740 supertile poses, 1479 OFFSET -> fail
+=== screw_c2: offset@3(1479) (7s)
+=== screw_c3: |R1|=72 (marked, stabilised at level 3); unmarked projection 9
+  level 1->2: |R_2|=9 (prev unmarked 9) self-similar=True (0s)
+  level 2->3: |R_3|=67 (prev unmarked 9) self-similar=False (0s)
+  level 3->4: 458 supertile poses, 329 OFFSET -> fail
+=== screw_c3: offset@3(329) (2s)
+=== screw_c4: |R1|=287 (marked, stabilised at level 5); unmarked projection 65
+  level 1->2: |R_2|=65 (prev unmarked 65) self-similar=True (0s)
+  level 2->3: |R_3|=506 (prev unmarked 65) self-similar=False (0s)
+  level 3->4: 3374 supertile poses, 2868 OFFSET -> fail
+=== screw_c4: offset@3(2868) (13s)
+=== screw_c5: |R1|=164 (marked, stabilised at level 4); unmarked projection 32
+  level 1->2: |R_2|=32 (prev unmarked 32) self-similar=True (0s)
+  level 2->3: |R_3|=235 (prev unmarked 32) self-similar=False (0s)
+  level 3->4: 1582 supertile poses, 1170 OFFSET -> fail
+=== screw_c5: offset@3(1170) (6s)
+=== screw_c6: |R1|=307 (marked, stabilised at level 6); unmarked projection 69
+  level 1->2: |R_2|=69 (prev unmarked 69) self-similar=True (0s)
+  level 2->3: |R_3|=507 (prev unmarked 69) self-similar=False (0s)
+  level 3->4: 3335 supertile poses, 2814 OFFSET -> fail
+=== screw_c6: offset@3(2814) (13s)
+=== screw_c7: |R1|=150 (marked, stabilised at level 4); unmarked projection 30
+  level 1->2: |R_2|=30 (prev unmarked 30) self-similar=True (0s)
+  level 2->3: |R_3|=249 (prev unmarked 30) self-similar=False (0s)
+  level 3->4: 1747 supertile poses, 1268 OFFSET -> fail
+=== screw_c7: offset@3(1268) (7s)
+=== screw_c8: |R1|=204 (marked, stabilised at level 4); unmarked projection 43
+  level 1->2: |R_2|=43 (prev unmarked 43) self-similar=True (0s)
+  level 2->3: |R_3|=320 (prev unmarked 43) self-similar=False (0s)
+  level 3->4: 2341 supertile poses, 1743 OFFSET -> fail
+=== screw_c8: offset@3(1743) (10s)
+=== screw_c9: |R1|=430 (marked, stabilised at level 6); unmarked projection 100
+  level 1->2: |R_2|=100 (prev unmarked 100) self-similar=True (0s)
+  level 2->3: |R_3|=746 (prev unmarked 100) self-similar=False (1s)
+  level 3->4: 5028 supertile poses, 4282 OFFSET -> fail
+=== screw_c9: offset@3(4282) (21s)
+=== screw_c10: |R1|=250 (marked, stabilised at level 5); unmarked projection 53
+  level 1->2: |R_2|=53 (prev unmarked 53) self-similar=True (0s)
+  level 2->3: |R_3|=393 (prev unmarked 53) self-similar=False (0s)
+  level 3->4: 2762 supertile poses, 1981 OFFSET -> fail
+=== screw_c10: offset@3(1981) (10s)
+=== screw_c11: |R1|=448 (marked, stabilised at level 5); unmarked projection 104
+  level 1->2: |R_2|=104 (prev unmarked 104) self-similar=True (0s)
+  level 2->3: |R_3|=756 (prev unmarked 104) self-similar=False (1s)
+  level 3->4: 5017 supertile poses, 4236 OFFSET -> fail
+=== screw_c11: offset@3(4236) (22s)
+=== screw_c12: |R1|=112 (marked, stabilised at level 3); unmarked projection 17
+  level 1->2: |R_2|=17 (prev unmarked 17) self-similar=True (0s)
+  level 2->3: |R_3|=103 (prev unmarked 17) self-similar=False (0s)
+  level 3->4: 670 supertile poses, 567 OFFSET -> fail
+=== screw_c12: offset@3(567) (3s)
+=== screw_c13: |R1|=172 (marked, stabilised at level 5); unmarked projection 34
+  level 1->2: |R_2|=34 (prev unmarked 34) self-similar=True (0s)
+  level 2->3: |R_3|=247 (prev unmarked 34) self-similar=False (0s)
+  level 3->4: 1569 supertile poses, 1308 OFFSET -> fail
+=== screw_c13: offset@3(1308) (6s)
+=== screw_c14: |R1|=168 (marked, stabilised at level 5); unmarked projection 35
+  level 1->2: |R_2|=35 (prev unmarked 35) self-similar=True (0s)
+  level 2->3: |R_3|=261 (prev unmarked 35) self-similar=False (0s)
+  level 3->4: 1740 supertile poses, 1479 OFFSET -> fail
+=== screw_c14: offset@3(1479) (7s)
+=== screw_c15: |R1|=112 (marked, stabilised at level 3); unmarked projection 19
+  level 1->2: |R_2|=19 (prev unmarked 19) self-similar=True (0s)
+  level 2->3: |R_3|=129 (prev unmarked 19) self-similar=False (0s)
+  level 3->4: 864 supertile poses, 735 OFFSET -> fail
+=== screw_c15: offset@3(735) (3s)
+=== screw_c16: |R1|=298 (marked, stabilised at level 5); unmarked projection 64
+  level 1->2: |R_2|=64 (prev unmarked 64) self-similar=True (0s)
+  level 2->3: |R_3|=443 (prev unmarked 64) self-similar=False (0s)
+  level 3->4: 2568 supertile poses, 2125 OFFSET -> fail
+=== screw_c16: offset@3(2125) (12s)
+=== screw_c17: |R1|=285 (marked, stabilised at level 5); unmarked projection 63
+  level 1->2: |R_2|=63 (prev unmarked 63) self-similar=True (0s)
+  level 2->3: |R_3|=449 (prev unmarked 63) self-similar=False (0s)
+  level 3->4: 2808 supertile poses, 2354 OFFSET -> fail
+=== screw_c17: offset@3(2354) (12s)
+=== screw_c18: |R1|=308 (marked, stabilised at level 5); unmarked projection 69
+  level 1->2: |R_2|=69 (prev unmarked 69) self-similar=True (0s)
+  level 2->3: |R_3|=516 (prev unmarked 69) self-similar=False (0s)
+  level 3->4: 3407 supertile poses, 2886 OFFSET -> fail
+=== screw_c18: offset@3(2886) (13s)
+=== screw_c19: |R1|=311 (marked, stabilised at level 5); unmarked projection 69
+  level 1->2: |R_2|=69 (prev unmarked 69) self-similar=True (0s)
+  level 2->3: |R_3|=506 (prev unmarked 69) self-similar=False (0s)
+  level 3->4: 3301 supertile poses, 2780 OFFSET -> fail
+=== screw_c19: offset@3(2780) (14s)
+=== screw_c20: |R1|=454 (marked, stabilised at level 6); unmarked projection 104
+  level 1->2: |R_2|=104 (prev unmarked 104) self-similar=True (0s)
+  level 2->3: |R_3|=768 (prev unmarked 104) self-similar=False (1s)
+  level 3->4: 5022 supertile poses, 4241 OFFSET -> fail
+=== screw_c20: offset@3(4241) (20s)
+=== screw_c21: |R1|=438 (marked, stabilised at level 5); unmarked projection 99
+  level 1->2: |R_2|=99 (prev unmarked 99) self-similar=True (0s)
+  level 2->3: |R_3|=700 (prev unmarked 99) self-similar=False (1s)
+  level 3->4: 4264 supertile poses, 3564 OFFSET -> fail
+=== screw_c21: offset@3(3564) (19s)
+=== screw_c22: |R1|=424 (marked, stabilised at level 5); unmarked projection 98
+  level 1->2: |R_2|=98 (prev unmarked 98) self-similar=True (0s)
+  level 2->3: |R_3|=710 (prev unmarked 98) self-similar=False (1s)
+  level 3->4: 4475 supertile poses, 3753 OFFSET -> fail
+=== screw_c22: offset@3(3753) (19s)
+=== screw_c23: |R1|=448 (marked, stabilised at level 6); unmarked projection 104
+  level 1->2: |R_2|=104 (prev unmarked 104) self-similar=True (0s)
+  level 2->3: |R_3|=768 (prev unmarked 104) self-similar=False (1s)
+  level 3->4: 5146 supertile poses, 4365 OFFSET -> fail
+=== screw_c23: offset@3(4365) (21s)
+=== screw_c24: |R1|=164 (marked, stabilised at level 5); unmarked projection 34
+  level 1->2: |R_2|=34 (prev unmarked 34) self-similar=True (0s)
+  level 2->3: |R_3|=255 (prev unmarked 34) self-similar=False (0s)
+  level 3->4: 1726 supertile poses, 1471 OFFSET -> fail
+=== screw_c24: offset@3(1471) (7s)
+=== screw_c25: |R1|=168 (marked, stabilised at level 5); unmarked projection 34
+  level 1->2: |R_2|=34 (prev unmarked 34) self-similar=True (0s)
+  level 2->3: |R_3|=254 (prev unmarked 34) self-similar=False (0s)
+  level 3->4: 1724 supertile poses, 1470 OFFSET -> fail
+=== screw_c25: offset@3(1470) (7s)
+=== screw_c26: |R1|=152 (marked, stabilised at level 4); unmarked projection 29
+  level 1->2: |R_2|=29 (prev unmarked 29) self-similar=True (0s)
+  level 2->3: |R_3|=183 (prev unmarked 29) self-similar=False (0s)
+  level 3->4: 1136 supertile poses, 953 OFFSET -> fail
+=== screw_c26: offset@3(953) (6s)
+=== screw_c27: |R1|=172 (marked, stabilised at level 5); unmarked projection 35
+  level 1->2: |R_2|=35 (prev unmarked 35) self-similar=True (0s)
+  level 2->3: |R_3|=261 (prev unmarked 35) self-similar=False (0s)
+  level 3->4: 1740 supertile poses, 1479 OFFSET -> fail
+=== screw_c27: offset@3(1479) (7s)
+=== screw_c28: |R1|=306 (marked, stabilised at level 4); unmarked projection 69
+  level 1->2: |R_2|=69 (prev unmarked 69) self-similar=True (0s)
+  level 2->3: |R_3|=519 (prev unmarked 69) self-similar=False (0s)
+  level 3->4: 3473 supertile poses, 2954 OFFSET -> fail
+=== screw_c28: offset@3(2954) (14s)
+=== screw_c29: |R1|=313 (marked, stabilised at level 5); unmarked projection 70
+  level 1->2: |R_2|=70 (prev unmarked 70) self-similar=True (0s)
+  level 2->3: |R_3|=521 (prev unmarked 70) self-similar=False (0s)
+  level 3->4: 3479 supertile poses, 2958 OFFSET -> fail
+=== screw_c29: offset@3(2958) (13s)
+=== screw_c30: |R1|=294 (marked, stabilised at level 5); unmarked projection 64
+  level 1->2: |R_2|=64 (prev unmarked 64) self-similar=True (0s)
+  level 2->3: |R_3|=442 (prev unmarked 64) self-similar=False (0s)
+  level 3->4: 2601 supertile poses, 2159 OFFSET -> fail
+=== screw_c30: offset@3(2159) (13s)
+=== screw_c31: |R1|=305 (marked, stabilised at level 4); unmarked projection 69
+  level 1->2: |R_2|=69 (prev unmarked 69) self-similar=True (0s)
+  level 2->3: |R_3|=519 (prev unmarked 69) self-similar=False (0s)
+  level 3->4: 3473 supertile poses, 2954 OFFSET -> fail
+=== screw_c31: offset@3(2954) (14s)
+=== screw_c32: |R1|=446 (marked, stabilised at level 6); unmarked projection 104
+  level 1->2: |R_2|=104 (prev unmarked 104) self-similar=True (0s)
+  level 2->3: |R_3|=774 (prev unmarked 104) self-similar=False (1s)
+  level 3->4: 5199 supertile poses, 4425 OFFSET -> fail
+=== screw_c32: offset@3(4425) (22s)
+=== screw_c33: |R1|=446 (marked, stabilised at level 6); unmarked projection 104
+  level 1->2: |R_2|=104 (prev unmarked 104) self-similar=True (0s)
+  level 2->3: |R_3|=774 (prev unmarked 104) self-similar=False (1s)
+  level 3->4: 5202 supertile poses, 4428 OFFSET -> fail
+=== screw_c33: offset@3(4428) (21s)
+=== screw_c34: |R1|=456 (marked, stabilised at level 6); unmarked projection 105
+  level 1->2: |R_2|=105 (prev unmarked 105) self-similar=True (0s)
+  level 2->3: |R_3|=781 (prev unmarked 105) self-similar=False (1s)
+  level 3->4: 5218 supertile poses, 4437 OFFSET -> fail
+=== screw_c34: offset@3(4437) (20s)
+=== screw_c35: |R1|=434 (marked, stabilised at level 5); unmarked projection 99
+  level 1->2: |R_2|=99 (prev unmarked 99) self-similar=True (0s)
+  level 2->3: |R_3|=700 (prev unmarked 99) self-similar=False (1s)
+  level 3->4: 4321 supertile poses, 3621 OFFSET -> fail
+=== screw_c35: offset@3(3621) (20s)
+=== screw_c36: |R1|=172 (marked, stabilised at level 4); unmarked projection 34
+  level 1->2: |R_2|=34 (prev unmarked 34) self-similar=True (0s)
+  level 2->3: |R_3|=246 (prev unmarked 34) self-similar=False (0s)
+  level 3->4: 1566 supertile poses, 1305 OFFSET -> fail
+=== screw_c36: offset@3(1305) (6s)
+=== screw_c37: |R1|=96 (marked, stabilised at level 3); unmarked projection 17
+  level 1->2: |R_2|=17 (prev unmarked 17) self-similar=True (0s)
+  level 2->3: |R_3|=131 (prev unmarked 17) self-similar=False (0s)
+  level 3->4: 922 supertile poses, 661 OFFSET -> fail
+=== screw_c37: offset@3(661) (3s)
+=== screw_c38: |R1|=172 (marked, stabilised at level 4); unmarked projection 35
+  level 1->2: |R_2|=35 (prev unmarked 35) self-similar=True (0s)
+  level 2->3: |R_3|=261 (prev unmarked 35) self-similar=False (0s)
+  level 3->4: 1740 supertile poses, 1479 OFFSET -> fail
+=== screw_c38: offset@3(1479) (7s)
+=== screw_c39: |R1|=96 (marked, stabilised at level 3); unmarked projection 17
+  level 1->2: |R_2|=17 (prev unmarked 17) self-similar=True (0s)
+  level 2->3: |R_3|=131 (prev unmarked 17) self-similar=False (0s)
+  level 3->4: 922 supertile poses, 661 OFFSET -> fail
+=== screw_c39: offset@3(661) (3s)
+=== screw_c40: |R1|=309 (marked, stabilised at level 6); unmarked projection 69
+  level 1->2: |R_2|=69 (prev unmarked 69) self-similar=True (0s)
+  level 2->3: |R_3|=513 (prev unmarked 69) self-similar=False (0s)
+  level 3->4: 3323 supertile poses, 2802 OFFSET -> fail
+=== screw_c40: offset@3(2802) (13s)
+=== screw_c41: |R1|=168 (marked, stabilised at level 4); unmarked projection 34
+  level 1->2: |R_2|=34 (prev unmarked 34) self-similar=True (0s)
+  level 2->3: |R_3|=262 (prev unmarked 34) self-similar=False (0s)
+  level 3->4: 1842 supertile poses, 1321 OFFSET -> fail
+=== screw_c41: offset@3(1321) (7s)
+=== screw_c42: |R1|=307 (marked, stabilised at level 6); unmarked projection 69
+  level 1->2: |R_2|=69 (prev unmarked 69) self-similar=True (0s)
+  level 2->3: |R_3|=516 (prev unmarked 69) self-similar=False (0s)
+  level 3->4: 3407 supertile poses, 2886 OFFSET -> fail
+=== screw_c42: offset@3(2886) (14s)
+=== screw_c43: |R1|=148 (marked, stabilised at level 4); unmarked projection 31
+  level 1->2: |R_2|=31 (prev unmarked 31) self-similar=True (0s)
+  level 2->3: |R_3|=229 (prev unmarked 31) self-similar=False (0s)
+  level 3->4: 1562 supertile poses, 1147 OFFSET -> fail
+=== screw_c43: offset@3(1147) (7s)
+=== screw_c44: |R1|=214 (marked, stabilised at level 4); unmarked projection 47
+  level 1->2: |R_2|=47 (prev unmarked 47) self-similar=True (0s)
+  level 2->3: |R_3|=337 (prev unmarked 47) self-similar=False (0s)
+  level 3->4: 2201 supertile poses, 1618 OFFSET -> fail
+=== screw_c44: offset@3(1618) (10s)
+=== screw_c45: |R1|=450 (marked, stabilised at level 6); unmarked projection 104
+  level 1->2: |R_2|=104 (prev unmarked 104) self-similar=True (0s)
+  level 2->3: |R_3|=763 (prev unmarked 104) self-similar=False (1s)
+  level 3->4: 5007 supertile poses, 4226 OFFSET -> fail
+=== screw_c45: offset@3(4226) (20s)
+=== screw_c46: |R1|=246 (marked, stabilised at level 4); unmarked projection 53
+  level 1->2: |R_2|=53 (prev unmarked 53) self-similar=True (0s)
+  level 2->3: |R_3|=393 (prev unmarked 53) self-similar=False (0s)
+  level 3->4: 2762 supertile poses, 1981 OFFSET -> fail
+=== screw_c46: offset@3(1981) (10s)
+=== screw_c47: |R1|=450 (marked, stabilised at level 5); unmarked projection 104
+  level 1->2: |R_2|=104 (prev unmarked 104) self-similar=True (0s)
+  level 2->3: |R_3|=768 (prev unmarked 104) self-similar=False (1s)
+  level 3->4: 5146 supertile poses, 4365 OFFSET -> fail
+=== screw_c47: offset@3(4365) (20s)
+=== screw_c48: |R1|=279 (marked, stabilised at level 4); unmarked projection 62
+  level 1->2: |R_2|=62 (prev unmarked 62) self-similar=True (0s)
+  level 2->3: |R_3|=443 (prev unmarked 62) self-similar=False (0s)
+  level 3->4: 2692 supertile poses, 2242 OFFSET -> fail
+=== screw_c48: offset@3(2242) (13s)
+=== screw_c49: |R1|=164 (marked, stabilised at level 4); unmarked projection 33
+  level 1->2: |R_2|=33 (prev unmarked 33) self-similar=True (0s)
+  level 2->3: |R_3|=255 (prev unmarked 33) self-similar=False (0s)
+  level 3->4: 1826 supertile poses, 1312 OFFSET -> fail
+=== screw_c49: offset@3(1312) (7s)
+=== screw_c50: |R1|=313 (marked, stabilised at level 5); unmarked projection 70
+  level 1->2: |R_2|=70 (prev unmarked 70) self-similar=True (0s)
+  level 2->3: |R_3|=521 (prev unmarked 70) self-similar=False (0s)
+  level 3->4: 3479 supertile poses, 2958 OFFSET -> fail
+=== screw_c50: offset@3(2958) (14s)
+=== screw_c51: |R1|=164 (marked, stabilised at level 4); unmarked projection 32
+  level 1->2: |R_2|=32 (prev unmarked 32) self-similar=True (0s)
+  level 2->3: |R_3|=234 (prev unmarked 32) self-similar=False (0s)
+  level 3->4: 1569 supertile poses, 1160 OFFSET -> fail
+=== screw_c51: offset@3(1160) (7s)
+=== screw_c52: |R1|=269 (marked, stabilised at level 5); unmarked projection 59
+  level 1->2: |R_2|=59 (prev unmarked 59) self-similar=True (0s)
+  level 2->3: |R_3|=478 (prev unmarked 59) self-similar=False (0s)
+  level 3->4: 3200 supertile poses, 2722 OFFSET -> fail
+=== screw_c52: offset@3(2722) (14s)
+=== screw_c53: |R1|=154 (marked, stabilised at level 4); unmarked projection 28
+  level 1->2: |R_2|=28 (prev unmarked 28) self-similar=True (0s)
+  level 2->3: |R_3|=178 (prev unmarked 28) self-similar=False (0s)
+  level 3->4: 1104 supertile poses, 829 OFFSET -> fail
+=== screw_c53: offset@3(829) (6s)
+=== screw_c54: |R1|=311 (marked, stabilised at level 5); unmarked projection 69
+  level 1->2: |R_2|=69 (prev unmarked 69) self-similar=True (0s)
+  level 2->3: |R_3|=508 (prev unmarked 69) self-similar=False (0s)
+  level 3->4: 3296 supertile poses, 2775 OFFSET -> fail
+=== screw_c54: offset@3(2775) (14s)
+=== screw_c55: |R1|=162 (marked, stabilised at level 4); unmarked projection 34
+  level 1->2: |R_2|=34 (prev unmarked 34) self-similar=True (0s)
+  level 2->3: |R_3|=262 (prev unmarked 34) self-similar=False (0s)
+  level 3->4: 1842 supertile poses, 1321 OFFSET -> fail
+=== screw_c55: offset@3(1321) (7s)
+=== screw_c56: |R1|=410 (marked, stabilised at level 5); unmarked projection 94
+  level 1->2: |R_2|=94 (prev unmarked 94) self-similar=True (0s)
+  level 2->3: |R_3|=696 (prev unmarked 94) self-similar=False (1s)
+  level 3->4: 5059 supertile poses, 3699 OFFSET -> fail
+=== screw_c56: offset@3(3699) (21s)
+=== screw_c57: |R1|=754 (marked, stabilised at level 6); unmarked projection 179
+  level 1->2: |R_2|=179 (prev unmarked 179) self-similar=True (0s)
+  level 2->3: |R_3|=1350 (prev unmarked 179) self-similar=False (1s)

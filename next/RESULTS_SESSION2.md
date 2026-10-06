@@ -78,3 +78,38 @@ For flexible tiles the frame carries too little information. The natural next ma
 Goodman-Strauss construction specialised to our pipeline. This needs the pose type in `cert3/cert6` extended
 from (g, t) to (g, t, i) (rel-pose = (g_A^{-1} g_B, t, i_A, i_B)); about a day of refactoring. It would give
 positive results for tripod/screw-type tiles (and possibly in 4D) at the price of larger marking sets.
+
+---
+
+## Addendum (session 3): two-level (frame + parent-index) markings — `mcert.py`, `mcensus.py`
+
+**Scheme.** A tile is marked by its frame *and* its index inside its parent supertile. Since the
+index already identifies the child, frame variants are mere relabellings — only dissection classes
+matter. Certificate: R_1 = hierarchical language of marked tiles; R_{j+1} = pairwise-admissible poses
+of (unmarked) level-j supertiles 2^{j-1}T; stop when R_{j+1} = 2R_j (j ≥ 2); then the enclosure /
+liveness analysis (claim 1) at every level.
+
+**Validation on the chair** (`python3 mcert.py`): |R_1| = 139 marked poses (projection 30),
+R_2 = 30, R_3 = R_4 = 44 → self-similar at level 3; claim 1 passes at levels 1 (7 enclosures, all
+type A), 2 and 3 (33 enclosures, 15 live, 14 type B) → CERTIFIED. This reproduces the 30/44 structure
+from the indexed language alone, confirming the implementation.
+
+**Flexible tiles** (`mcensus.py NAME`): 
+
+| tile | dissection classes tested | outcome |
+|---|---|---|
+| hex222 | 3/3 | offset at level 2 (2 classes), level 3 (1 class) |
+| tripod | 52/52 | offset at level 3 (50); 2 classes (c6, c48) no offset to level 4 but |R_j| = 7, 58, 238 growing — open |
+| screw | 57 of 10 440 classes | offset at level 3 (all) |
+
+**Interpretation.** The index markings pin level 1 completely (R_2 = unmarked R_1 is always
+reached), but at level 2 the supertile 2T is an *unmarked* shape and its copies "slide" exactly as the
+unmarked tile did: the pairwise-admissible rule for 2T admits the alternative dissections of 4T, so
+offsets reappear one level up. Marking k levels of indices only pushes the failure to level k+1,
+because the sliding is a property of the shape 2^{j}T, which has the same dissection combinatorics
+at every level. This is further evidence for the rigidity conjecture (closure ⇔ unique dissection):
+no finite marking of the tile can replace a unique dissection.  The two "open" tripod classes have
+a rule that grows without stabilising (no self-similarity), so they are not candidates either.
+
+Files: `mcert.py`, `mcensus.py`, logs `mcensus_hex222.log`, `mcensus_tripod.log`,
+`mcensus_tripod2.log`, `mcensus_screw.log`, pickles `mcensus_*_*.pkl`.

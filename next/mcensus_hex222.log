@@ -1,0 +1,15 @@
+### hex222: 5 dissections -> 3 classes (frame variants irrelevant under full index marking)
+=== hex222_c0: |R1|=92 (marked, stabilised at level 3); unmarked projection 16
+  level 1->2: |R_2|=16 (prev unmarked 16) self-similar=True (0s)
+  level 2->3: |R_3|=62 (prev unmarked 16) self-similar=False (0s)
+  level 3->4: 282 supertile poses, 160 OFFSET -> fail
+=== hex222_c0: offset@3(160) (2s)
+=== hex222_c1: |R1|=721 (marked, stabilised at level 6); unmarked projection 209
+  level 1->2: |R_2|=209 (prev unmarked 209) self-similar=True (0s)
+  level 2->3: 1548 supertile poses, 832 OFFSET -> fail
+=== hex222_c1: offset@2(832) (2s)
+=== hex222_c2: |R1|=423 (marked, stabilised at level 6); unmarked projection 112
+  level 1->2: |R_2|=112 (prev unmarked 112) self-similar=True (0s)
+  level 2->3: 900 supertile poses, 240 OFFSET -> fail
+=== hex222_c2: offset@2(240) (1s)
+### hex222 summary: Counter({'offset@2': 2, 'offset@3': 1})
