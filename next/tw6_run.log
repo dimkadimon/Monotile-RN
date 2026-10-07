@@ -1,0 +1,4 @@
+tw6: 2 dissections, 2 classes
+class 0: |P|=13385 |L0|=13385
+=== tw6_c0: |R1|=105594 (marked, stabilised at level 14); unmarked projection 13385
+  level 1->2: |R_2|=13385 (prev unmarked 13385) self-similar=True (112s)

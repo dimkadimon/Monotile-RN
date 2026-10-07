@@ -47,3 +47,22 @@ depth enforces it; every unique class either is the chair or has a periodic hier
    rep-16 tile ≤ 5 cells; a ≤ 7-cell census is feasible).
 2. The periodic-SAT filter (Corollary of Theorem A) decides a class in seconds, so any census can be
    coupled with it directly; `mcert.py` is only needed for the survivors.
+
+## Addendum (session 3d): inflation factor 3 (rep-27) in 3D and factor 2 in 4D
+
+Code: `rep_census_gen.py N K MAXC CAP [MINC] [TLIM]` (generic dimension/inflation, per-shape time limit);
+logs `rep27_3d.log`, `rep27_s6.log`, `rep27_s7.log`, `rep27_s8.log`, `rep16_4d.log`, `tw6_run.log`, `tw6b.log`.
+
+**4D, factor 2, all free polycubes ≤ 7 cells** (1, 1, 2, 7, 26, 147, 1019 shapes): rep-16 shapes
+1, 2, 5, 5, 20, 12 for sizes 2–7.  Unique dissection: bars only.  Smallest non-trivial counts: a
+6-cell shape `tw6` = {0000, 0001, 0002, 0010, 0102, 1010} with 2 dissections / 2 classes, and 7-cell
+shapes with 4 and 10 classes.  `tw6` is hopeless: its adjacency language has |P| = 13 385 and 14 366
+poses (stabilising only at hierarchy level 14–15), i.e. the hierarchy is extremely floppy; the depth-1
+certificate ran out of memory.  **No 4D rep-16 polycube ≤ 7 cells has a unique dissection** (the 4D
+chair has 15 cells).
+
+**3D, factor 3 (27 copies), ≤ 6 cells complete, 7–8 cells running** (per-shape limit 30 s, no
+time-outs so far): rep-27 shapes 1, 2, 6, ≥2, ≥10 for sizes 2–6.  Unique dissection: bars only.  Non-bar
+examples: 5-cell U (1×2×3 minus centre) 20 dissections / 10 classes; 6-cell 1×3×3 S-shape 40 / 20;
+7-cell 2×2×3 "step" {000,001,002,010,011,100,110} 8 / 8.  The chair is **not** rep-27 (Session 2).
+Conclusion so far: factor 3 does not produce rigid small tiles either; non-uniqueness is the rule.
